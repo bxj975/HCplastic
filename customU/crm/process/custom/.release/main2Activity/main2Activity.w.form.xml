@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window cfiEram" component="$model/UI2/system/components/justep/window/window" design="device:pc" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cfiEram" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/bootstrap/form/form,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/bootstrap/row/row,$model/UI2/system/components/justep/windowDialog/windowDialog,$model/UI2/system/components/justep/data/bizData,$model/UI2/system/components/justep/toolBar/toolBar,$model/UI2/system/components/justep/button/checkbox,$model/UI2/system/components/justep/windowReceiver/windowReceiver,$model/UI2/system/components/justep/grid/grid,$model/UI2/system/components/justep/window/window,">  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="cfiEram" class="cfiEram"></div>  
+  <span component="$model/UI2/system/components/justep/windowDialog/windowDialog" xid="windowDialog1" data-bind="component:{name:'$model/UI2/system/components/justep/windowDialog/windowDialog'}" data-config="{&quot;src&quot;:&quot;$model/UI2/custom/crm/process/custom/secondActivity.w&quot;,&quot;status&quot;:&quot;normal&quot;}" __cid="cfiEram" class="cfiEram"> 
+    <result concept="treeData" operation="modify" origin="dialogData" xid="default3" __cid="cfiEram" class="cfiEram"> 
+      <mapping from="CU_KHXX" to="fPARENT" xid="default4" __cid="cfiEram" class="cfiEram"/> 
+    </result>  
+    <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog-overlay cfiEram" __cid="cfiEram"/>
+    <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog cfiEram" style="display:none;" __cid="cfiEram">
+      <xhtml:div class="x-dialog-title cfiEram" __cid="cfiEram">
+        <xhtml:button class="close cfiEram" __cid="cfiEram">
+          <xhtml:span __cid="cfiEram" class="cfiEram">×</xhtml:span>
+        </xhtml:button>
+        <xhtml:div class="x-dialog-title-text cfiEram" __cid="cfiEram"/>
+      </xhtml:div>
+      <xhtml:div class="x-dialog-body cfiEram" __cid="cfiEram"/>
+    </xhtml:div>
+  </span>  
+  <span component="$model/UI2/system/components/justep/windowReceiver/windowReceiver" xid="windowReceiver" style="top:2px;left:606px;" data-bind="component:{name:'$model/UI2/system/components/justep/windowReceiver/windowReceiver'}" data-events="onReceive:windowReceiverReceive" __cid="cfiEram" class="cfiEram"/>  
+  <div class="container-fluid cfiEram" xid="view" __cid="cfiEram"> 
+    <div component="$model/UI2/system/components/justep/toolBar/toolBar" class="x-toolbar form-inline x-toolbar-spliter cfiEram" xid="toolBar1" data-bind="component:{name:'$model/UI2/system/components/justep/toolBar/toolBar'}" __cid="cfiEram"> 
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cfiEram" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'treeData.new'}" __cid="cfiEram"> 
+        <i xid="i3" __cid="cfiEram" class="cfiEram"/>  
+        <span xid="span3" __cid="cfiEram" class="cfiEram"/> 
+      </a>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cfiEram" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'treeData.save'}" __cid="cfiEram"> 
+        <i xid="i1" __cid="cfiEram" class="cfiEram"/>  
+        <span xid="span1" __cid="cfiEram" class="cfiEram"/> 
+      </a>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cfiEram" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'treeData.delete'}" __cid="cfiEram"> 
+        <i xid="i2" __cid="cfiEram" class="cfiEram"/>  
+        <span xid="span2" __cid="cfiEram" class="cfiEram"/> 
+      </a>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cfiEram" xid="button4" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'treeData.newChild'}" __cid="cfiEram"> 
+        <i xid="i4" __cid="cfiEram" class="cfiEram"/>  
+        <span xid="span4" __cid="cfiEram" class="cfiEram"/> 
+      </a>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cfiEram" xid="button5" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'treeData.newBrother'}" __cid="cfiEram"> 
+        <i xid="i5" __cid="cfiEram" class="cfiEram"/>  
+        <span xid="span5" __cid="cfiEram" class="cfiEram"/> 
+      </a>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cfiEram" xid="moveBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:moveBtnClick" data-config="{&quot;icon&quot;:&quot;linear linear-linespacing&quot;,&quot;label&quot;:&quot;移动&quot;}" __cid="cfiEram"> 
+        <i xid="i6" class="linear linear-linespacing cfiEram" __cid="cfiEram"/>  
+        <span xid="span6" __cid="cfiEram" class="cfiEram">移动</span> 
+      </a>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cfiEram" xid="firstBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:firstBtnClick" data-config="{&quot;icon&quot;:&quot;linear linear-location&quot;,&quot;label&quot;:&quot;一级&quot;}" __cid="cfiEram"> 
+        <i xid="i8" class="linear linear-location cfiEram" __cid="cfiEram"/>  
+        <span xid="span8" __cid="cfiEram" class="cfiEram">一级</span> 
+      </a>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link  cfiEram" xid="OKBtn" bind-enable="canOK" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:OKBtnClick" data-config="{&quot;label&quot;:&quot;确定&quot;}" __cid="cfiEram"> 
+        <i xid="i1" __cid="cfiEram" class="cfiEram"/>  
+        <span xid="span1" __cid="cfiEram" class="cfiEram">确定</span> 
+      </a>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-label  cfiEram" xid="cancelBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;windowReceiver.windowCancel&quot;}" data-config="{&quot;label&quot;:&quot;取消&quot;}" __cid="cfiEram"> 
+        <i xid="i2" __cid="cfiEram" class="cfiEram"/>  
+        <span xid="span2" __cid="cfiEram" class="cfiEram">取消</span> 
+      </a>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cfiEram" xid="button7" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'treeData.refresh'}" __cid="cfiEram"> 
+        <i xid="i7" __cid="cfiEram" class="cfiEram"/>  
+        <span xid="span7" __cid="cfiEram" class="cfiEram"/> 
+      </a>  
+      <span component="$model/UI2/system/components/justep/button/checkbox" class="x-checkbox cfiEram" xid="checkbox1" label="编辑" checkedValue="是" uncheckedValue="否" checked="false" data-config="{&quot;checked&quot;:false,&quot;checkedValue&quot;:&quot;是&quot;,&quot;disabled&quot;:false,&quot;label&quot;:&quot;编辑&quot;,&quot;uncheckedValue&quot;:&quot;否&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/checkbox'}" data-events="onChange:checkbox1Change" __cid="cfiEram">
+        <xhtml:input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="checkbox" __cid="cfiEram" class="cfiEram"/>
+        <xhtml:label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cfiEram" class="cfiEram">编辑</xhtml:label>
+      </span>  
+      <input xid="seekInput" class="form-control cfiEram" component="$model/UI2/system/components/justep/input/input" style="width:139px;" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;valueUpdateMode&quot;:&quot;input&quot;}" __cid="cfiEram"/> 
+    </div>  
+    <div component="$model/UI2/system/components/bootstrap/row/row" class="row cfiEram" xid="row1" data-bind="component:{name:'$model/UI2/system/components/bootstrap/row/row'}" __cid="cfiEram"> 
+      <div class="col col-xs-3 cfiEram" xid="col1" style="overflow: auto;" __cid="cfiEram"> 
+        <xhtml:table xmlns:xhtml="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/grid/grid" hiddenCaptionbar="true" altRows="true" class="x-grid-no-bordered cfiEram" xid="grid2" data="treeData" directEdit="false" appearance="tree" expandColumn="fKHMC" virtualRootLabel="客户信息" useVirtualRoot="true" data-config="{&quot;altRows&quot;:true,&quot;appearance&quot;:&quot;tree&quot;,&quot;colModel&quot;:[{&quot;name&quot;:&quot;fKHMC&quot;,&quot;xid&quot;:&quot;column1&quot;}],&quot;data&quot;:&quot;treeData&quot;,&quot;directEdit&quot;:false,&quot;expandColumn&quot;:&quot;fKHMC&quot;,&quot;height&quot;:&quot;auto&quot;,&quot;hiddenCaptionbar&quot;:true,&quot;useVirtualRoot&quot;:true,&quot;virtualRootLabel&quot;:&quot;客户信息&quot;,&quot;width&quot;:&quot;100%&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/grid/grid'}" data-events="onRowSelect:grid2RowSelect" __cid="cfiEram"/> 
+      </div>  
+      <div class="col col-xs-9 col-spliter-left cfiEram" xid="col2" __cid="cfiEram"> 
+        <div xid="mainForm" class="form-horizontal cfiEram" component="$model/UI2/system/components/bootstrap/form/form" style="margin:30px 10px" data-bind="component:{name:'$model/UI2/system/components/bootstrap/form/form'}" __cid="cfiEram"> 
+          <div xid="formGroup1" class="form-group cfiEram" __cid="cfiEram"> 
+            <div xid="col11" class="col-sm-2 cfiEram" __cid="cfiEram"> 
+              <label xid="versionL" class="control-label cfiEram" bind-text="treeData.label('version')" __cid="cfiEram"/> 
+            </div>  
+            <div xid="col12" class="col-sm-10 cfiEram" __cid="cfiEram"> 
+              <input xid="version" class="form-control cfiEram" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('version'),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;readonly&quot;:true}" __cid="cfiEram"/> 
+            </div> 
+          </div>  
+          <div xid="formGroup2" class="form-group cfiEram" __cid="cfiEram"> 
+            <div xid="col21" class="col-sm-2 cfiEram" __cid="cfiEram"> 
+              <label xid="fKHBML" class="control-label cfiEram" bind-text="treeData.label('fKHBM')" __cid="cfiEram"/> 
+            </div>  
+            <div xid="col22" class="col-sm-10 cfiEram" __cid="cfiEram"> 
+              <input xid="fKHBM" class="form-control cfiEram" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fKHBM'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cfiEram"/> 
+            </div> 
+          </div>  
+          <div xid="formGroup3" class="form-group cfiEram" __cid="cfiEram"> 
+            <div xid="col31" class="col-sm-2 cfiEram" __cid="cfiEram"> 
+              <label xid="fKHMCL" class="control-label cfiEram" bind-text="treeData.label('fKHMC')" __cid="cfiEram"/> 
+            </div>  
+            <div xid="col32" class="col-sm-10 cfiEram" __cid="cfiEram"> 
+              <input xid="fKHMC" class="form-control cfiEram" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fKHMC'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cfiEram"/> 
+            </div> 
+          </div>  
+          <div xid="formGroup5" class="form-group cfiEram" __cid="cfiEram"> 
+            <div xid="col51" class="col-sm-2 cfiEram" __cid="cfiEram"> 
+              <label xid="fLXRL" class="control-label cfiEram" bind-text="treeData.label('fLXR')" __cid="cfiEram"/> 
+            </div>  
+            <div xid="col52" class="col-sm-10 cfiEram" __cid="cfiEram"> 
+              <input xid="fLXR" class="form-control cfiEram" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fLXR'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cfiEram"/> 
+            </div> 
+          </div>  
+          <div xid="formGroup6" class="form-group cfiEram" __cid="cfiEram"> 
+            <div xid="col61" class="col-sm-2 cfiEram" __cid="cfiEram"> 
+              <label xid="fLXDHL" class="control-label cfiEram" bind-text="treeData.label('fLXDH')" __cid="cfiEram"/> 
+            </div>  
+            <div xid="col62" class="col-sm-10 cfiEram" __cid="cfiEram"> 
+              <input xid="fLXDH" class="form-control cfiEram" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fLXDH'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cfiEram"/> 
+            </div> 
+          </div>  
+          <div xid="formGroup7" class="form-group cfiEram" __cid="cfiEram"> 
+            <div xid="col71" class="col-sm-2 cfiEram" __cid="cfiEram"> 
+              <label xid="fYDDHL" class="control-label cfiEram" bind-text="treeData.label('fYDDH')" __cid="cfiEram"/> 
+            </div>  
+            <div xid="col72" class="col-sm-10 cfiEram" __cid="cfiEram"> 
+              <input xid="fYDDH" class="form-control cfiEram" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fYDDH'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cfiEram"/> 
+            </div> 
+          </div>  
+          <div xid="formGroup8" class="form-group cfiEram" __cid="cfiEram"> 
+            <div xid="col81" class="col-sm-2 cfiEram" __cid="cfiEram"> 
+              <label xid="fLXQQL" class="control-label cfiEram" bind-text="treeData.label('fLXQQ')" __cid="cfiEram"/> 
+            </div>  
+            <div xid="col82" class="col-sm-10 cfiEram" __cid="cfiEram"> 
+              <input xid="fLXQQ" class="form-control cfiEram" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fLXQQ'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cfiEram"/> 
+            </div> 
+          </div>  
+          <div xid="formGroup9" class="form-group cfiEram" __cid="cfiEram"> 
+            <div xid="col91" class="col-sm-2 cfiEram" __cid="cfiEram"> 
+              <label xid="fLXWXL" class="control-label cfiEram" bind-text="treeData.label('fLXWX')" __cid="cfiEram"/> 
+            </div>  
+            <div xid="col92" class="col-sm-10 cfiEram" __cid="cfiEram"> 
+              <input xid="fLXWX" class="form-control cfiEram" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fLXWX'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cfiEram"/> 
+            </div> 
+          </div>  
+          <div xid="formGroup10" class="form-group cfiEram" __cid="cfiEram"> 
+            <div xid="col101" class="col-sm-2 cfiEram" __cid="cfiEram"> 
+              <label xid="fSHDZL" class="control-label cfiEram" bind-text="treeData.label('fSHDZ')" __cid="cfiEram"/> 
+            </div>  
+            <div xid="col102" class="col-sm-10 cfiEram" __cid="cfiEram"> 
+              <input xid="fSHDZ" class="form-control cfiEram" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fSHDZ'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cfiEram"/> 
+            </div> 
+          </div>  
+          <div xid="formGroup11" class="form-group cfiEram" __cid="cfiEram"> 
+            <div xid="col111" class="col-sm-2 cfiEram" __cid="cfiEram"> 
+              <label xid="fBZL" class="control-label cfiEram" bind-text="treeData.label('fBZ')" __cid="cfiEram"/> 
+            </div>  
+            <div xid="col112" class="col-sm-10 cfiEram" __cid="cfiEram"> 
+              <input xid="fBZ" class="form-control cfiEram" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fBZ'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cfiEram"/> 
+            </div> 
+          </div>  
+          <div xid="formGroup4" class="form-group cfiEram" __cid="cfiEram"> 
+            <div xid="col41" class="col-sm-2 cfiEram" __cid="cfiEram"> 
+              <label xid="fJSFSL" class="control-label cfiEram" bind-text="treeData.label('fJSFS')" __cid="cfiEram"/> 
+            </div>  
+            <div xid="col42" class="col-sm-10 cfiEram" __cid="cfiEram"> 
+              <input xid="fJSFS" class="form-control cfiEram" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:$model.treeData.ref(&quot;fJSFS&quot;),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;readonly&quot;:true}" __cid="cfiEram"/> 
+            </div> 
+          </div>  
+          <div xid="formGroup12" class="form-group cfiEram" __cid="cfiEram"> 
+            <div xid="col121" class="col-sm-2 cfiEram" __cid="cfiEram"> 
+              <label xid="fGZRL" class="control-label cfiEram" bind-text="treeData.label('fGZR')" __cid="cfiEram"/> 
+            </div>  
+            <div xid="col122" class="col-sm-10 cfiEram" __cid="cfiEram"> 
+              <input xid="fGZR" class="form-control cfiEram" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fGZR'),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;readonly&quot;:true}" __cid="cfiEram"/> 
+            </div> 
+          </div>  
+          <div xid="formGroup14" class="form-group cfiEram" __cid="cfiEram"> 
+            <div xid="col141" class="col-sm-2 cfiEram" __cid="cfiEram"> 
+              <label xid="fWHSJL" class="control-label cfiEram" bind-text="treeData.label('fWHSJ')" __cid="cfiEram"/> 
+            </div>  
+            <div xid="col142" class="col-sm-10 cfiEram" __cid="cfiEram"> 
+              <input xid="fWHSJ" class="form-control cfiEram" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fWHSJ'),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;readonly&quot;:true}" __cid="cfiEram"/> 
+            </div> 
+          </div>  
+          <div xid="formGroup15" class="form-group cfiEram" __cid="cfiEram"> 
+            <div xid="col151" class="col-sm-2 cfiEram" __cid="cfiEram"> 
+              <label xid="fWHRL" class="control-label cfiEram" bind-text="treeData.label('fWHR')" __cid="cfiEram"/> 
+            </div>  
+            <div xid="col152" class="col-sm-10 cfiEram" __cid="cfiEram"> 
+              <input xid="fWHR" class="form-control cfiEram" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fWHR'),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;readonly&quot;:true}" __cid="cfiEram"/> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+</div>

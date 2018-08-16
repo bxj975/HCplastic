@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<report xmlns:xreport="http://www.justep.com/x5/xreport" xmlns:rdl="http://www.justep.com/RDL">  
+  <report-model/>  
+  <report-view> 
+    <request id="report1">
+      <xreport:params>
+        <report-name/>
+        <uiserver-url/>
+        <current-process/>
+        <current-activity/>
+      </xreport:params>
+      <xreport:model/>
+      <xreport:view output-type="">
+        <rdl:report>
+          <rdl:model>
+            <rdl:mapping>
+              <data id="p1" path="record">
+                <fDJBH path="fDJBH"/>
+                <fDJRQ path="fDJRQ"/>
+                <fKHMC path="fKHMC"/>
+                <fTXSJ path="fTXSJ"/>
+                <fFHFS path="fFHFS"/>
+                <fGZR path="fGZR"/>
+                <fBZE path="fBZE"/>
+                <fCPMC path="fCPMC"/>
+                <fGGXH path="fGGXH"/>
+                <fJLDW path="fJLDW"/>
+                <fJG path="fJG"/>
+                <fSL path="fSL"/>
+                <fHJ path="fHJ"/>
+                <fZBLX path="fZBLX"/>
+                <fBS path="fBS"/>
+                <fBDJ path="fBDJ"/>
+                <fBFHJ path="fBFHJ"/>
+                <fYSLX path="fYSLX"/>
+                <fCZ path="fCZ"/>
+                <fDX path="fDX"/>
+                <fBYE path="fBYE"/>
+                <fCPYQ path="fCPYQ"/>
+                <fCPBZ path="fCPBZ"/>
+                <fKHYQ path="fKHYQ"/>
+              </data>
+            </rdl:mapping>
+            <rdl:dataset id="p1">
+              <root>
+                <record ref="p1">
+                  <fDJRQ/>
+                  <fKHMC/>
+                  <fTXSJ/>
+                  <fFHFS/>
+                  <fGZR/>
+                  <fBZE/>
+                  <fCPMC/>
+                  <fGGXH/>
+                  <fJLDW/>
+                  <fJG/>
+                  <fSL/>
+                  <fHJ/>
+                  <fZBLX/>
+                  <fBS/>
+                  <fBDJ/>
+                  <fBFHJ/>
+                  <fYSLX/>
+                  <fCZ/>
+                  <fDX/>
+                  <fBYE/>
+                  <fCPYQ/>
+                  <fCPBZ/>
+                  <fKHYQ/>
+                  <fDJBH/>
+                </record>
+              </root>
+            </rdl:dataset>
+          </rdl:model>
+          <rdl:layout-set master-name="A4">
+            <rdl:layout master-name="A4" orientation="" margin-top="2.4mm" margin-bottom="2.4mm" margin-left="3.7mm" margin-right="3.7mm" page-width="210mm" page-height="297mm"/>
+          </rdl:layout-set>
+          <rdl:content-set>
+            <rdl:styles>
+              <rdl:style id="s73" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" format="#,##0.00000_ " overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="s72" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" color="#000000" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="s71" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" bold="true" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="s70" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" format="0.00_ " overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="s69" text-align="Center" vertical-align="middle" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="s68" text-align="Center" vertical-align="middle" overflow="hidden"/>
+              <rdl:style id="s67" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden"/>
+              <rdl:style id="s66" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="s65" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="s64" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="s63" text-align="Center" vertical-align="middle" wrap-text="1" overflow="hidden"/>
+              <rdl:style id="s62" text-align="Center" vertical-align="middle" format="0.00;[Red]0.00" overflow="hidden"/>
+              <rdl:style id="Default" vertical-align="middle" font-family="宋体" font-size="11pt" color="#000000" overflow="hidden"/>
+              <rdl:style id="97275882" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="956006241" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="95204075" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="906607550" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" overflow="hidden"/>
+              <rdl:style id="902152180" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="877751473" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="857941459" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="790439778" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="727692718" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="707221129" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="704424648" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="585408833" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="565505788" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="556880672" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="553775508" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="491996839" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="491874203" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="478045854" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="456213670" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="370248560" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="31512886" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" color="#000000" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="217888230" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="216540978" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="2102165928" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="2100629982" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="2073630898" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="2071549221" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="2071150237" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="2017442538" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" overflow="hidden"/>
+              <rdl:style id="1985163868" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="1971863551" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" overflow="hidden"/>
+              <rdl:style id="1881311465" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="1847565437" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="1839548661" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="1826543729" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" color="#000000" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="1816562115" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="1796260600" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" color="#000000" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="1793861748" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" overflow="hidden"/>
+              <rdl:style id="1776173489" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="175770030" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" overflow="hidden"/>
+              <rdl:style id="1752532141" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="1718247314" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="1716919893" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" format="#,##0.00000_ " overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="1699105262" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" format="0.00_ " overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="1693467381" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="1657006204" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" overflow="hidden"/>
+              <rdl:style id="1634214425" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" format="#,##0.00000_ " overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="1536142790" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="1295838517" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="1217494169" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="1209675796" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" overflow="hidden"/>
+              <rdl:style id="1038647869" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-950975444" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-945909666" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-907165714" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" format="0.00_ " overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-903817570" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000" overflow="hidden"/>
+              <rdl:style id="-875498080" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-856937775" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-828910836" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-780329204" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" overflow="hidden"/>
+              <rdl:style id="-752326127" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-744321429" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-661029859" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-623255431" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-621772978" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-586453952" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" color="#000000" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-552417457" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-511850542" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-485038975" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-456288948" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" overflow="hidden"/>
+              <rdl:style id="-339351116" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" format="0.00_ " overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-300186158" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-268357900" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-214067085" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-2139668649" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" overflow="hidden"/>
+              <rdl:style id="-2116751191" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-2093051593" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1996165197" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1985849707" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1977513111" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" overflow="hidden"/>
+              <rdl:style id="-1941374903" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" color="#000000" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1914854369" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" bold="true" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1837399091" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1828451401" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-180863600" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1792152905" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1782631435" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1717601762" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" overflow="hidden"/>
+              <rdl:style id="-1662289079" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" format="0.00_ " overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1649845370" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1623586757" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" format="0.00_ " overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1608020877" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-160702504" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1475161028" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" format="0.00_ " overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1466492811" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1444980507" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1440332971" text-align="Center" vertical-align="middle" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1425916743" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1356881157" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000" overflow="hidden"/>
+              <rdl:style id="-1310495200" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000" overflow="hidden"/>
+              <rdl:style id="-1219512825" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1184378155" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1110496850" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-110347447" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" color="#000000" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1091172361" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1068176812" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" color="#000000" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1044670121" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+              <rdl:style id="-1033997740" text-align="Center" vertical-align="middle" font-family="宋体" font-size="10pt" overflow="hidden" border-top-width="1px" border-top-style="Continuous" border-top-color="#000000" border-left-width="1px" border-left-style="Continuous" border-left-color="#000000"/>
+            </rdl:styles>
+            <rdl:content>
+              <rdl:table autoWidth="false" autoHeight="false" vertical-align="middle" font-family="宋体" font-size="11pt" color="#000000" width="1184" height="226">
+                <rdl:table-columns>
+                  <rdl:table-column id="C1" width="72.0"/>
+                  <rdl:table-column id="C2" width="72.0"/>
+                  <rdl:table-column id="C3" width="129.0"/>
+                  <rdl:table-column id="C4" width="68.0"/>
+                  <rdl:table-column id="C5" width="137.0"/>
+                  <rdl:table-column id="C6" width="66.0"/>
+                  <rdl:table-column id="C7" width="101.0"/>
+                  <rdl:table-column id="C8" width="67.0"/>
+                  <rdl:table-column id="C9" width="69.0"/>
+                  <rdl:table-column id="C10" width="62.0"/>
+                  <rdl:table-column id="C11" width="83.0"/>
+                  <rdl:table-column id="C12" width="66.0"/>
+                  <rdl:table-column id="C13" width="92.0"/>
+                  <rdl:table-column id="C14" width="99.0"/>
+                  <rdl:table-column id="C15" width="1.0"/>
+                </rdl:table-columns>
+                <rdl:table-rows>
+                  <rdl:table-row id="R1" height="18.0">
+                    <rdl:table-cell id="R1C1" column="C1"/>
+                    <rdl:table-cell id="R1C2" column="C2"/>
+                    <rdl:table-cell id="R1C3" column="C3"/>
+                    <rdl:table-cell id="R1C4" column="C4"/>
+                    <rdl:table-cell id="R1C5" column="C5"/>
+                    <rdl:table-cell id="R1C6" column="C6"/>
+                    <rdl:table-cell id="R1C7" column="C7"/>
+                    <rdl:table-cell id="R1C8" column="C8"/>
+                    <rdl:table-cell id="R1C9" column="C9"/>
+                    <rdl:table-cell id="R1C10" column="C10"/>
+                    <rdl:table-cell id="R1C11" column="C11"/>
+                    <rdl:table-cell id="R1C12" column="C12"/>
+                    <rdl:table-cell id="R1C13" column="C13" styleID="s62">
+                      <rdl:report-data/>
+                    </rdl:table-cell>
+                    <rdl:table-cell id="R1C14" column="C14" styleID="s63">
+                      <rdl:report-data/>
+                    </rdl:table-cell>
+                    <rdl:table-cell id="R1C15" column="C15"/>
+                  </rdl:table-row>
+                  <rdl:repeat id="PR3C2" keep-with-next="true " nodeset="dataset('p1')//record" start="1" end="16">
+                    <rdl:variable id="VR3C2" type="String" ref="fDJBH"/>
+                    <rdl:table-row id="R2" height="18.0">
+                      <rdl:table-cell id="R2C1" column="C1" rowspan="7">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R2C2" column="C2"/>
+                      <rdl:table-cell id="R2C3" column="C3"/>
+                      <rdl:table-cell id="R2C4" column="C4"/>
+                      <rdl:table-cell id="R2C5" column="C5"/>
+                      <rdl:table-cell id="R2C6" column="C6"/>
+                      <rdl:table-cell id="R2C7" column="C7"/>
+                      <rdl:table-cell id="R2C8" column="C8"/>
+                      <rdl:table-cell id="R2C9" column="C9"/>
+                      <rdl:table-cell id="R2C10" column="C10"/>
+                      <rdl:table-cell id="R2C11" column="C11"/>
+                      <rdl:table-cell id="R2C12" column="C12"/>
+                      <rdl:table-cell id="R2C13" column="C13"/>
+                      <rdl:table-cell id="R2C14" column="C14"/>
+                      <rdl:table-cell id="R2C15" column="C15"/>
+                    </rdl:table-row>
+                    <rdl:table-row id="R3" height="19.0">
+                      <rdl:table-cell id="R3C2" column="C2" type="String" ref="fDJBH" index="2" styleID="s64">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R3C3" column="C3" type="String" v-group="$PR3C2" h-group="$ALL" ref="fDJRQ" index="3" styleID="-1425916743">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R3C4" column="C4" type="String" styleID="-1110496850">
+                        <rdl:report-data>客户名称:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R3C5" column="C5" type="String" v-group="$PR3C2" h-group="$ALL" ref="fKHMC" index="5" styleID="-1914854369">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R3C6" column="C6" type="String" styleID="-1792152905">
+                        <rdl:report-data>交货日期:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R3C7" column="C7" type="String" v-group="$PR3C2" h-group="$ALL" ref="fTXSJ" index="7" styleID="-875498080">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R3C8" column="C8" type="String" styleID="216540978">
+                        <rdl:report-data>交货方式:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R3C9" column="C9" type="String" v-group="$PR3C2" h-group="$ALL" ref="fFHFS" index="9" styleID="-623255431">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R3C10" column="C10" type="String" styleID="491996839">
+                        <rdl:report-data>经办人:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R3C11" column="C11" type="String" v-group="$PR3C2" h-group="$ALL" ref="fGZR" index="11" styleID="553775508">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R3C12" column="C12" styleID="-1440332971">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R3C13" column="C13" type="String" v-group="$PR3C2" h-group="$ALL" ref="fBZE" index="13" styleID="-1941374903">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R3C14" column="C14" styleID="-1356881157"/>
+                      <rdl:table-cell id="R3C15" column="C15"/>
+                    </rdl:table-row>
+                    <rdl:table-row id="R4" height="19.0">
+                      <rdl:table-cell id="R4C2" column="C2" type="String" index="2" styleID="-1033997740">
+                        <rdl:report-data>产品名称:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R4C3" column="C3" type="String" v-group="$PR3C2" h-group="$ALL" ref="fCPMC" index="3" styleID="-1608020877">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R4C4" column="C4" type="String" styleID="1693467381">
+                        <rdl:report-data>规格型号:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R4C5" column="C5" type="String" v-group="$PR3C2" h-group="$ALL" ref="fGGXH" index="5" styleID="-2093051593">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R4C6" column="C6" type="String" styleID="556880672">
+                        <rdl:report-data>计量单位:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R4C7" column="C7" type="String" v-group="$PR3C2" h-group="$ALL" ref="fJLDW" index="7" styleID="-2116751191">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R4C8" column="C8" type="String" styleID="1038647869">
+                        <rdl:report-data>单价:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R4C9" column="C9" type="Number" v-group="$PR3C2" h-group="$ALL" ref="fJG" index="9" styleID="1716919893">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R4C10" column="C10" type="String" styleID="-1466492811">
+                        <rdl:report-data>数量:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R4C11" column="C11" type="Number" v-group="$PR3C2" h-group="$ALL" ref="fSL" index="11" styleID="1699105262">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R4C12" column="C12" type="String" styleID="-1782631435">
+                        <rdl:report-data>小计:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R4C13" column="C13" type="String" v-group="$PR3C2" h-group="$ALL" ref="fHJ" index="13" styleID="790439778">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R4C14" column="C14" styleID="-903817570"/>
+                      <rdl:table-cell id="R4C15" column="C15"/>
+                    </rdl:table-row>
+                    <rdl:table-row id="R5" height="19.0">
+                      <rdl:table-cell id="R5C2" column="C2" type="String" index="2" styleID="-950975444">
+                        <rdl:report-data>制版类型:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R5C3" column="C3" type="String" v-group="$PR3C2" h-group="$ALL" ref="fZBLX" index="3" styleID="2100629982">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R5C4" column="C4" type="String" styleID="1985163868">
+                        <rdl:report-data>版数:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R5C5" column="C5" type="Number" v-group="$PR3C2" h-group="$ALL" ref="fBS" index="5" styleID="-1623586757">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R5C6" column="C6" type="String" styleID="1752532141">
+                        <rdl:report-data>版单价:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R5C7" column="C7" type="Number" v-group="$PR3C2" h-group="$ALL" ref="fBDJ" index="7" styleID="-1662289079">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R5C8" column="C8" styleID="2071549221">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R5C9" column="C9" styleID="-485038975">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R5C10" column="C10" styleID="707221129">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R5C11" column="C11" styleID="704424648">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R5C12" column="C12" type="String" styleID="877751473">
+                        <rdl:report-data>小计:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R5C13" column="C13" type="String" v-group="$PR3C2" h-group="$ALL" ref="fBFHJ" index="13" styleID="1881311465">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R5C14" column="C14" styleID="-1444980507">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R5C15" column="C15"/>
+                    </rdl:table-row>
+                    <rdl:table-row id="R6" height="19.0">
+                      <rdl:table-cell id="R6C2" column="C2" type="String" index="2" styleID="-1044670121">
+                        <rdl:report-data>印刷类型:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R6C3" column="C3" type="String" v-group="$PR3C2" h-group="$ALL" ref="fYSLX" index="3" styleID="902152180">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R6C4" column="C4" type="String" styleID="1536142790">
+                        <rdl:report-data>材质:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R6C5" column="C5" type="String" v-group="$PR3C2" h-group="$ALL" ref="fCZ" index="5" styleID="-1837399091">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R6C6" column="C6" type="String" styleID="-744321429">
+                        <rdl:report-data>袋型:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R6C7" column="C7" type="String" v-group="$PR3C2" h-group="$ALL" ref="fDX" index="7" styleID="-856937775">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R6C8" column="C8" styleID="-752326127">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R6C9" column="C9" styleID="1816562115">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R6C10" column="C10" styleID="2102165928">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R6C11" column="C11" styleID="1839548661">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R6C12" column="C12" type="String" styleID="-160702504">
+                        <rdl:report-data>合计:</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R6C13" column="C13" type="String" v-group="$PR3C2" h-group="$ALL" ref="fBYE" index="13" styleID="-621772978">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R6C14" column="C14" styleID="-1184378155">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R6C15" column="C15"/>
+                    </rdl:table-row>
+                    <rdl:table-row id="R7" height="95.0">
+                      <rdl:table-cell id="R7C2" column="C2" type="String" index="2" styleID="-1219512825">
+                        <rdl:report-data>产品要求</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R7C3" column="C3" type="String" colspan="3" v-group="$PR3C2" h-group="$ALL" ref="fCPYQ" index="3" styleID="2073630898">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R7C6" column="C6" type="String" index="6" styleID="1718247314">
+                        <rdl:report-data>产品备注</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R7C7" column="C7" type="String" colspan="3" v-group="$PR3C2" h-group="$ALL" ref="fCPBZ" index="7" styleID="-586453952">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R7C10" column="C10" type="String" index="10" styleID="31512886">
+                        <rdl:report-data>客户要求</rdl:report-data>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R7C11" column="C11" type="String" colspan="3" v-group="$PR3C2" h-group="$ALL" ref="fKHYQ" index="11" styleID="-1068176812">
+                        <rdl:report-data/>
+                      </rdl:table-cell>
+                      <rdl:table-cell id="R7C14" column="C14" styleID="-1310495200"/>
+                      <rdl:table-cell id="R7C15" column="C15"/>
+                    </rdl:table-row>
+                    <rdl:table-row id="R8" height="18.0">
+                      <rdl:table-cell id="R8C1" column="C1"/>
+                      <rdl:table-cell id="R8C2" column="C2" styleID="175770030"/>
+                      <rdl:table-cell id="R8C3" column="C3" styleID="-780329204"/>
+                      <rdl:table-cell id="R8C4" column="C4" styleID="-456288948"/>
+                      <rdl:table-cell id="R8C5" column="C5" styleID="1657006204"/>
+                      <rdl:table-cell id="R8C6" column="C6" styleID="-2139668649"/>
+                      <rdl:table-cell id="R8C7" column="C7" styleID="2017442538"/>
+                      <rdl:table-cell id="R8C8" column="C8" styleID="1209675796"/>
+                      <rdl:table-cell id="R8C9" column="C9" styleID="-1717601762"/>
+                      <rdl:table-cell id="R8C10" column="C10" styleID="-1977513111"/>
+                      <rdl:table-cell id="R8C11" column="C11" styleID="1793861748"/>
+                      <rdl:table-cell id="R8C12" column="C12" styleID="906607550"/>
+                      <rdl:table-cell id="R8C13" column="C13" styleID="1971863551"/>
+                      <rdl:table-cell id="R8C14" column="C14"/>
+                      <rdl:table-cell id="R8C15" column="C15"/>
+                    </rdl:table-row>
+                  </rdl:repeat>
+                  <rdl:table-row id="R9" height="1.0">
+                    <rdl:table-cell id="R9C1" column="C1"/>
+                    <rdl:table-cell id="R9C2" column="C2"/>
+                    <rdl:table-cell id="R9C3" column="C3"/>
+                    <rdl:table-cell id="R9C4" column="C4"/>
+                    <rdl:table-cell id="R9C5" column="C5"/>
+                    <rdl:table-cell id="R9C6" column="C6"/>
+                    <rdl:table-cell id="R9C7" column="C7"/>
+                    <rdl:table-cell id="R9C8" column="C8"/>
+                    <rdl:table-cell id="R9C9" column="C9"/>
+                    <rdl:table-cell id="R9C10" column="C10"/>
+                    <rdl:table-cell id="R9C11" column="C11"/>
+                    <rdl:table-cell id="R9C12" column="C12"/>
+                    <rdl:table-cell id="R9C13" column="C13"/>
+                    <rdl:table-cell id="R9C14" column="C14"/>
+                    <rdl:table-cell id="R9C15" column="C15"/>
+                  </rdl:table-row>
+                </rdl:table-rows>
+              </rdl:table>
+            </rdl:content>
+          </rdl:content-set>
+        </rdl:report>
+      </xreport:view>
+    </request>
+  </report-view> 
+</report>

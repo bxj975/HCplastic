@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" xid="window" design="device:pc;" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="c2Mr6nu" class="c2Mr6nu" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/bootstrap/row/row,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/smartFilter/smartFilter,$model/UI2/system/components/justep/windowDialog/windowDialog,$model/UI2/system/components/justep/data/bizData,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/dataTables/dataTables,$model/UI2/system/components/justep/windowReceiver/windowReceiver,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,">  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="c2Mr6nu" class="c2Mr6nu"></div>  
+  <span component="$model/UI2/system/components/justep/windowReceiver/windowReceiver" xid="windowReceiver" style="top:2px;left:606px;" data-bind="component:{name:'$model/UI2/system/components/justep/windowReceiver/windowReceiver'}" data-events="onReceive:windowReceiverReceive" __cid="c2Mr6nu" class="c2Mr6nu"/>  
+  <span component="$model/UI2/system/components/justep/windowDialog/windowDialog" xid="windowDialog1" data-bind="component:{name:'$model/UI2/system/components/justep/windowDialog/windowDialog'}" data-config="{&quot;forceRefreshOnOpen&quot;:true,&quot;src&quot;:&quot;$model/UI2/custom/crm/process/product/mainActivity.w&quot;}" __cid="c2Mr6nu" class="c2Mr6nu"> 
+    <result concept="selectData" operation="modify" origin="mainData" xid="default2" __cid="c2Mr6nu" class="c2Mr6nu"> 
+      <mapping from="CU_CPXX" to="CU_CPXX" xid="default3" __cid="c2Mr6nu" class="c2Mr6nu"/>
+    </result>
+    <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog-overlay c2Mr6nu" __cid="c2Mr6nu"/>
+    <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog c2Mr6nu" style="display:none;" __cid="c2Mr6nu">
+      <xhtml:div class="x-dialog-title c2Mr6nu" __cid="c2Mr6nu">
+        <xhtml:button class="close c2Mr6nu" __cid="c2Mr6nu">
+          <xhtml:span __cid="c2Mr6nu" class="c2Mr6nu">×</xhtml:span>
+        </xhtml:button>
+        <xhtml:div class="x-dialog-title-text c2Mr6nu" __cid="c2Mr6nu"/>
+      </xhtml:div>
+      <xhtml:div class="x-dialog-body c2Mr6nu" __cid="c2Mr6nu"/>
+    </xhtml:div>
+  </span>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pcERf2iq-iosstatusbar c2Mr6nu" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="c2Mr6nu"> 
+    <div class="x-panel-top container-fluid c2Mr6nu" xid="top2" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="c2Mr6nu"> 
+      <div component="$model/UI2/system/components/bootstrap/row/row" class="row c2Mr6nu" xid="row2" style="height:100%;" data-bind="component:{name:'$model/UI2/system/components/bootstrap/row/row'}" __cid="c2Mr6nu"> 
+        <div class="col col-xs-6 col-md-4 c2Mr6nu" xid="col4" style="height:100%;padding-left: 0;" __cid="c2Mr6nu"> 
+          <div component="$model/UI2/system/components/justep/smartFilter/smartFilter" xid="smartFilter1" data-bind="component:{name:'$model/UI2/system/components/justep/smartFilter/smartFilter'}" data-config="{&quot;filterCols&quot;:&quot;fCPBM,fCPMC,fGGXH,fYSLX,fCZ,fDX,fJLDW,fJG,fCPYQ&quot;,&quot;filterData&quot;:&quot;dialogData&quot;}" __cid="c2Mr6nu" class="c2Mr6nu"> 
+            <input type="text" class="form-control c2Mr6nu" placeholder="搜索" data-bind="valueUpdate: ['input', 'afterkeydown']" bind-value="$model.comp($element.parentElement).searchText" bind-change="$model.comp($element.parentElement).onInputChange.bind($model.comp($element.parentElement))" xid="input1" __cid="c2Mr6nu"/> 
+          </div> 
+        </div>  
+        <div class="col col-xs-6 col-md-8 c2Mr6nu" xid="col3" style="height:100%;" __cid="c2Mr6nu"> 
+          <div class="pull-right c2Mr6nu" __cid="c2Mr6nu"> 
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left c2Mr6nu" xid="preBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;selectData.prevPage&quot;}" data-config="{&quot;icon&quot;:&quot;icon-ios7-arrow-back&quot;}" __cid="c2Mr6nu"> 
+              <i xid="i9" class="icon-ios7-arrow-back c2Mr6nu" __cid="c2Mr6nu"/>  
+              <span xid="span9" __cid="c2Mr6nu" class="c2Mr6nu">上页</span> 
+            </a>  
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left c2Mr6nu" xid="nextBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;selectData.nextPage&quot;}" data-config="{&quot;icon&quot;:&quot;icon-ios7-arrow-forward&quot;}" __cid="c2Mr6nu"> 
+              <i xid="i8" class="icon-ios7-arrow-forward c2Mr6nu" __cid="c2Mr6nu"/>  
+              <span xid="span8" __cid="c2Mr6nu" class="c2Mr6nu">下页</span> 
+            </a> 
+          </div>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link c2Mr6nu" xid="newBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:newBtnClick" data-config="{&quot;label&quot;:&quot;新建&quot;}" __cid="c2Mr6nu"> 
+            <i xid="i3" __cid="c2Mr6nu" class="c2Mr6nu"/>  
+            <span xid="span3" __cid="c2Mr6nu" class="c2Mr6nu">新建</span> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link c2Mr6nu" xid="refreshBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:refreshBtnClick" data-config="{&quot;icon&quot;:&quot;linear linear-redo&quot;,&quot;label&quot;:&quot;刷新&quot;}" __cid="c2Mr6nu"> 
+            <i xid="i4" class="linear linear-redo c2Mr6nu" __cid="c2Mr6nu"/>  
+            <span xid="span4" __cid="c2Mr6nu" class="c2Mr6nu">刷新</span>
+          </a> 
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content container-fluid c2Mr6nu" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="c2Mr6nu"> 
+      <div component="$model/UI2/system/components/bootstrap/row/row" class="row c2Mr6nu" xid="row1" style="height:100%;overflow: hidden;" data-bind="component:{name:'$model/UI2/system/components/bootstrap/row/row'}" __cid="c2Mr6nu"> 
+        <div class="col col-xs-6 col-sm-6 col-md-6 col-lg-6 c2Mr6nu" xid="col1" style="height:100%;padding-left: 0;" __cid="c2Mr6nu"> 
+          <div class="x-bordered c2Mr6nu" style="height:100%;" xid="searchDiv" __cid="c2Mr6nu"> 
+            <xhtml:table xmlns:xhtml="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/dataTables/dataTables" flexibleWidth="true" data="dialogData" rowActiveClass="active" class="table c2Mr6nu" xid="searchGrid" scrollCollapse="false" ordering="false" lengthMenu="20" data-config="{&quot;columns&quot;:[{&quot;sName&quot;:&quot;fCPBM&quot;,&quot;title&quot;:&quot;产品编码&quot;},{&quot;sName&quot;:&quot;fCPMC&quot;,&quot;title&quot;:&quot;产品名称&quot;},{&quot;sName&quot;:&quot;fGGXH&quot;,&quot;title&quot;:&quot;规格型号&quot;},{&quot;sName&quot;:&quot;fYSLX&quot;,&quot;title&quot;:&quot;印刷类型&quot;,&quot;visible&quot;:false},{&quot;sName&quot;:&quot;fCZ&quot;,&quot;title&quot;:&quot;材质&quot;,&quot;visible&quot;:false},{&quot;sName&quot;:&quot;fDX&quot;,&quot;title&quot;:&quot;袋型&quot;,&quot;visible&quot;:false},{&quot;sName&quot;:&quot;fJLDW&quot;,&quot;title&quot;:&quot;计量单位&quot;,&quot;visible&quot;:false},{&quot;sName&quot;:&quot;fJG&quot;,&quot;title&quot;:&quot;价格&quot;,&quot;visible&quot;:false},{&quot;sName&quot;:&quot;fCPYQ&quot;,&quot;title&quot;:&quot;产品要求&quot;,&quot;visible&quot;:false}],&quot;data&quot;:&quot;dialogData&quot;,&quot;flexibleWidth&quot;:true,&quot;lengthMenu&quot;:&quot;20&quot;,&quot;ordering&quot;:false,&quot;rowActiveClass&quot;:&quot;active&quot;,&quot;scrollCollapse&quot;:false}" data-bind="component:{name:'$model/UI2/system/components/justep/dataTables/dataTables'}" data-events="onRowDblClick:searchGridRowDblClick" __cid="c2Mr6nu"/> 
+          </div> 
+        </div>  
+        <div class="col col-xs-1 col-sm-1 col-md-1 col-lg-1 c2Mr6nu" xid="col2" style="height:100%;padding:5% 0 0 0;" __cid="c2Mr6nu"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left btn-block c2Mr6nu" xid="addAllBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:addAllBtnClick" data-config="{&quot;icon&quot;:&quot;icon-chevron-right&quot;,&quot;label&quot;:&quot;全选&quot;}" __cid="c2Mr6nu"> 
+            <i xid="i3" class="icon-chevron-right c2Mr6nu" __cid="c2Mr6nu"/>  
+            <span xid="span3" __cid="c2Mr6nu" class="c2Mr6nu">全选</span> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left btn-block c2Mr6nu" xid="addBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:addBtnClick" data-config="{&quot;icon&quot;:&quot;icon-chevron-right&quot;,&quot;label&quot;:&quot;选择&quot;}" __cid="c2Mr6nu"> 
+            <i xid="i4" class="icon-chevron-right c2Mr6nu" __cid="c2Mr6nu"/>  
+            <span xid="span4" __cid="c2Mr6nu" class="c2Mr6nu">选择</span> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left btn-block c2Mr6nu" xid="removeBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:removeBtnClick" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;移除&quot;}" __cid="c2Mr6nu"> 
+            <i xid="i5" class="icon-chevron-left c2Mr6nu" __cid="c2Mr6nu"/>  
+            <span xid="span5" __cid="c2Mr6nu" class="c2Mr6nu">移除</span> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left btn-block c2Mr6nu" xid="removeAllBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:removeAllBtnClick" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;清空&quot;}" __cid="c2Mr6nu"> 
+            <i xid="i6" class="icon-chevron-left c2Mr6nu" __cid="c2Mr6nu"/>  
+            <span xid="span6" __cid="c2Mr6nu" class="c2Mr6nu">清空</span> 
+          </a> 
+        </div>  
+        <div class="col col-xs-5 col-sm-5 col-md-5 col-lg-5 c2Mr6nu" xid="col7" style="height:100%;padding-right: 0;" __cid="c2Mr6nu"> 
+          <div class="x-bordered c2Mr6nu" style="height:100%;" __cid="c2Mr6nu"> 
+            <xhtml:table xmlns:xhtml="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/dataTables/dataTables" flexibleWidth="true" data="selectData" rowActiveClass="active" class="table c2Mr6nu" xid="selectGrid" scrollCollapse="false" ordering="false" data-config="{&quot;columns&quot;:[{&quot;sName&quot;:&quot;fCPBM&quot;,&quot;title&quot;:&quot;产品编码&quot;},{&quot;sName&quot;:&quot;fCPMC&quot;,&quot;title&quot;:&quot;产品名称&quot;},{&quot;sName&quot;:&quot;fGGXH&quot;,&quot;title&quot;:&quot;规格型号&quot;},{&quot;sName&quot;:&quot;fYSLX&quot;,&quot;title&quot;:&quot;印刷类型&quot;,&quot;visible&quot;:false},{&quot;sName&quot;:&quot;fCZ&quot;,&quot;title&quot;:&quot;材质&quot;,&quot;visible&quot;:false},{&quot;sName&quot;:&quot;fDX&quot;,&quot;title&quot;:&quot;袋型&quot;,&quot;visible&quot;:false},{&quot;sName&quot;:&quot;fJLDW&quot;,&quot;title&quot;:&quot;计量单位&quot;,&quot;visible&quot;:false},{&quot;sName&quot;:&quot;fJG&quot;,&quot;title&quot;:&quot;价格&quot;,&quot;visible&quot;:false},{&quot;sName&quot;:&quot;fCPYQ&quot;,&quot;title&quot;:&quot;产品要求&quot;,&quot;visible&quot;:false}],&quot;data&quot;:&quot;selectData&quot;,&quot;flexibleWidth&quot;:true,&quot;ordering&quot;:false,&quot;rowActiveClass&quot;:&quot;active&quot;,&quot;scrollCollapse&quot;:false}" data-bind="component:{name:'$model/UI2/system/components/justep/dataTables/dataTables'}" data-events="onRowDblClick:selectGridRowDblClick" __cid="c2Mr6nu"/> 
+          </div> 
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-bottom c2Mr6nu" xid="bottom1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" data-config="{&quot;height&quot;:42}" __cid="c2Mr6nu"> 
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-label x-dialog-button c2Mr6nu" xid="cancelBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;windowReceiver.windowCancel&quot;}" data-config="{&quot;label&quot;:&quot;取消&quot;}" __cid="c2Mr6nu"> 
+        <i xid="i2" __cid="c2Mr6nu" class="c2Mr6nu"/>  
+        <span xid="span2" __cid="c2Mr6nu" class="c2Mr6nu">取消</span> 
+      </a>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-primary x-dialog-button c2Mr6nu" xid="OKBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:OKBtnClick" data-config="{&quot;label&quot;:&quot;确定&quot;}" __cid="c2Mr6nu"> 
+        <i xid="i1" __cid="c2Mr6nu" class="c2Mr6nu"/>  
+        <span xid="span1" __cid="c2Mr6nu" class="c2Mr6nu">确定</span> 
+      </a> 
+    </div>  
+    <style __cid="c2Mr6nu" class="c2Mr6nu">.x-panel.pcERf2iq-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pcERf2iq-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: 42px;}.x-panel.pcERf2iq-iosstatusbar &gt;.x-panel-bottom {height: 42px;}.iosstatusbar .x-panel.pcERf2iq-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcERf2iq-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pcERf2iq-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcERf2iq-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcERf2iq-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcERf2iq-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
+  </div> 
+</div>

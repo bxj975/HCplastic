@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" xid="window" design="device:pc;" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cneyyy2" class="cneyyy2" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/windowReceiver/windowReceiver,$model/UI2/system/components/bootstrap/row/row,$model/UI2/system/components/justep/grid/grid,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/smartFilter/smartFilter,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/data/bizData,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/dataTables/dataTables,">  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="cneyyy2" class="cneyyy2"></div>  
+  <span component="$model/UI2/system/components/justep/windowReceiver/windowReceiver" xid="windowReceiver" style="top:2px;left:606px;" data-bind="component:{name:'$model/UI2/system/components/justep/windowReceiver/windowReceiver'}" data-events="onReceive:windowReceiverReceive" __cid="cneyyy2" class="cneyyy2"/>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pc7zquyq-iosstatusbar cneyyy2" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cneyyy2"> 
+    <div class="x-panel-top cneyyy2" xid="top2" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cneyyy2"> 
+      <div component="$model/UI2/system/components/bootstrap/row/row" class="row cneyyy2" xid="row1" data-bind="component:{name:'$model/UI2/system/components/bootstrap/row/row'}" __cid="cneyyy2"> 
+        <div class="col col-xs-6 col-md-4 cneyyy2" xid="col1" __cid="cneyyy2"> 
+          <div component="$model/UI2/system/components/justep/smartFilter/smartFilter" xid="smartFilter1" data-bind="component:{name:'$model/UI2/system/components/justep/smartFilter/smartFilter'}" data-events="onFilter:smartFilterFilter" data-config="{&quot;filterCols&quot;:&quot;fCPMC&quot;,&quot;filterData&quot;:&quot;dialogData&quot;}" __cid="cneyyy2" class="cneyyy2"> 
+            <input type="text" class="form-control cneyyy2" placeholder="搜索" data-bind="valueUpdate: ['input', 'afterkeydown']" bind-value="$model.comp($element.parentElement).searchText" bind-change="$model.comp($element.parentElement).onInputChange.bind($model.comp($element.parentElement))" xid="input1" __cid="cneyyy2"/> 
+          </div> 
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content cneyyy2" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cneyyy2"> 
+      <div style="height:100%;overflow-x: hidden;" bind-visible="!showFilterGird.get()" class="x-bordered cneyyy2" __cid="cneyyy2"> 
+        <xhtml:table xmlns:xhtml="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/grid/grid" appearance="tree" data="dialogData" expandColumn="fCPMC" useVirtualRoot="true" virtualRootLabel="产品信息" xid="treeGrid" class="x-grid-no-bordered cneyyy2" data-config="{&quot;appearance&quot;:&quot;tree&quot;,&quot;colModel&quot;:[{&quot;name&quot;:&quot;fCPMC&quot;}],&quot;data&quot;:&quot;dialogData&quot;,&quot;expandColumn&quot;:&quot;fCPMC&quot;,&quot;height&quot;:&quot;auto&quot;,&quot;useVirtualRoot&quot;:true,&quot;virtualRootLabel&quot;:&quot;产品信息&quot;,&quot;width&quot;:&quot;100%&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/grid/grid'}" data-events="onRowClick:treeGridRowClick" __cid="cneyyy2"/> 
+      </div>  
+      <div class="x-bordered cneyyy2" style="display:none;height:0;" bind-visible="showFilterGird" xid="searchDiv" __cid="cneyyy2"> 
+        <xhtml:table xmlns:xhtml="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/dataTables/dataTables" flexibleWidth="true" data="searchData" rowActiveClass="active" class="table cneyyy2" xid="searchGrid" scrollCollapse="false" ordering="false" lengthMenu="20" data-config="{&quot;columns&quot;:[{&quot;sName&quot;:&quot;fCPMC&quot;}],&quot;data&quot;:&quot;searchData&quot;,&quot;flexibleWidth&quot;:true,&quot;lengthMenu&quot;:&quot;20&quot;,&quot;ordering&quot;:false,&quot;rowActiveClass&quot;:&quot;active&quot;,&quot;scrollCollapse&quot;:false}" data-bind="component:{name:'$model/UI2/system/components/justep/dataTables/dataTables'}" data-events="onRowSelect:searchGridRowSelect" __cid="cneyyy2"/> 
+      </div> 
+    </div>  
+    <div class="x-panel-bottom cneyyy2" xid="bottom1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" data-config="{&quot;height&quot;:42}" __cid="cneyyy2"> 
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-label x-dialog-button cneyyy2" xid="cancelBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;windowReceiver.windowCancel&quot;}" data-config="{&quot;label&quot;:&quot;取消&quot;}" __cid="cneyyy2"> 
+        <i xid="i2" __cid="cneyyy2" class="cneyyy2"/>  
+        <span xid="span2" __cid="cneyyy2" class="cneyyy2">取消</span> 
+      </a>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-primary x-dialog-button cneyyy2" xid="OKBtn" bind-enable="canOK" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:OKBtnClick" data-config="{&quot;label&quot;:&quot;确定&quot;}" __cid="cneyyy2"> 
+        <i xid="i1" __cid="cneyyy2" class="cneyyy2"/>  
+        <span xid="span1" __cid="cneyyy2" class="cneyyy2">确定</span> 
+      </a> 
+    </div>  
+    <style __cid="cneyyy2" class="cneyyy2">.x-panel.pc7zquyq-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pc7zquyq-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: 42px;}.x-panel.pc7zquyq-iosstatusbar &gt;.x-panel-bottom {height: 42px;}.iosstatusbar .x-panel.pc7zquyq-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc7zquyq-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pc7zquyq-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc7zquyq-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc7zquyq-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc7zquyq-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
+  </div> 
+</div>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" xid="window" design="device:pc;" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cb2YfAj" class="cb2YfAj" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/pagerBar/pagerBar,$model/UI2/system/components/bootstrap/form/form,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/controlGroup/controlGroup,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/bootstrap/pagination/pagination,$model/UI2/system/components/justep/smartFilter/smartFilter,$model/UI2/system/components/justep/data/bizData,$model/UI2/system/components/justep/toolBar/toolBar,$model/UI2/system/components/justep/textarea/textarea,$model/UI2/system/components/justep/dataTables/dataTables,$model/UI2/system/components/bootstrap/tabs/tab,$model/UI2/system/components/justep/button/checkbox,$model/UI2/system/components/justep/windowReceiver/windowReceiver,$model/UI2/system/components/justep/pagerLimitSelect/pagerLimitSelect,$model/UI2/system/components/justep/select/select,$model/UI2/system/components/justep/gridSelect/gridSelect,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/bootstrap/tabs/tabs,">  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="cb2YfAj" class="cb2YfAj"/>  
+  <span xmlns="" component="$model/UI2/system/components/justep/windowReceiver/windowReceiver" xid="windowReceiver" data-bind="component:{name:'$model/UI2/system/components/justep/windowReceiver/windowReceiver'}" data-events="onReceive:windowReceiverReceive" __cid="cb2YfAj" class="cb2YfAj"/>  
+  <div xmlns="" component="$model/UI2/system/components/bootstrap/tabs/tabs" xid="tabs" data-bind="component:{name:'$model/UI2/system/components/bootstrap/tabs/tabs'}" __cid="cb2YfAj" class="cb2YfAj"> 
+    <ul class="nav nav-tabs cb2YfAj" xid="navs" __cid="cb2YfAj"> 
+      <li class="active cb2YfAj" xid="nav-list" component="$model/UI2/system/components/bootstrap/tabs/tab" data-bind="component:{name:'$model/UI2/system/components/bootstrap/tabs/tab'}" __cid="cb2YfAj"> 
+        <a content="list" xid="tabItem1" __cid="cb2YfAj" class="cb2YfAj">列表</a> 
+      </li>  
+      <li role="presentation" xid="nav-detail" component="$model/UI2/system/components/bootstrap/tabs/tab" data-bind="component:{name:'$model/UI2/system/components/bootstrap/tabs/tab'}" __cid="cb2YfAj" class="cb2YfAj"> 
+        <a content="detail" xid="tabItem2" __cid="cb2YfAj" class="cb2YfAj">详细</a> 
+      </li> 
+    </ul>  
+    <div class="tab-content cb2YfAj" xid="contents" __cid="cb2YfAj"> 
+      <div class="tab-pane active cb2YfAj" xid="list" __cid="cb2YfAj"> 
+        <div xid="bar" component="$model/UI2/system/components/justep/toolBar/toolBar" class="x-toolbar x-toolbar-spliter form-inline cb2YfAj" data-bind="component:{name:'$model/UI2/system/components/justep/toolBar/toolBar'}" __cid="cb2YfAj"> 
+          <div component="$model/UI2/system/components/justep/smartFilter/smartFilter" xid="smartFilter1" class="pull-right cb2YfAj" data-bind="component:{name:'$model/UI2/system/components/justep/smartFilter/smartFilter'}" data-config="{&quot;filterCols&quot;:&quot;fKHBM,fKHMC,fKHLB,fLXR,fLXDH,fYDDH,fJSFS,fGZR,fSZQY&quot;,&quot;filterData&quot;:&quot;mainData&quot;}" __cid="cb2YfAj"> 
+            <input type="text" class="form-control cb2YfAj" placeholder="搜索" data-bind="valueUpdate: ['input', 'afterkeydown'],value:$model.comp($element.parentElement).searchText,event:{change:$model.comp($element.parentElement).onInputChange.bind($model.comp($element.parentElement))}" xid="input4" __cid="cb2YfAj"/> 
+          </div>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cb2YfAj" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:addBtnClick" data-config="{&quot;icon&quot;:&quot;icon-plus&quot;,&quot;label&quot;:&quot; 新建&quot;}" __cid="cb2YfAj"> 
+            <i class="icon-plus cb2YfAj" __cid="cb2YfAj"/>  
+            <span __cid="cb2YfAj" class="cb2YfAj">新建</span> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cb2YfAj" xid="delBtn1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:delBtn1Click" data-config="{&quot;icon&quot;:&quot;icon-minus&quot;,&quot;label&quot;:&quot;删除&quot;}" __cid="cb2YfAj"> 
+            <i xid="i7" class="icon-minus cb2YfAj" __cid="cb2YfAj"/>  
+            <span xid="span11" __cid="cb2YfAj" class="cb2YfAj">删除</span> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cb2YfAj" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;mainData.refresh&quot;}" __cid="cb2YfAj"> 
+            <i xid="i6" __cid="cb2YfAj" class="cb2YfAj"/>  
+            <span xid="span10" __cid="cb2YfAj" class="cb2YfAj">刷新</span> 
+          </a> 
+        </div>  
+        <table xmlns:xhtml="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/dataTables/dataTables" flexibleWidth="false" class="table table-hover table-striped hidder-xs cb2YfAj" xid="listData" data="mainData" rowActiveClass="active" responsive="true" data-config="{&quot;columns&quot;:[{&quot;sName&quot;:&quot;fKHBM&quot;},{&quot;sName&quot;:&quot;fKHMC&quot;},{&quot;sName&quot;:&quot;fFLMC1&quot;,&quot;title&quot;:&quot;类别&quot;},{&quot;sName&quot;:&quot;fLXR&quot;},{&quot;sName&quot;:&quot;fLXDH&quot;},{&quot;sName&quot;:&quot;fYDDH&quot;},{&quot;sName&quot;:&quot;fJSFS&quot;},{&quot;sName&quot;:&quot;fZYMC&quot;},{&quot;sName&quot;:&quot;fFLMC&quot;,&quot;title&quot;:&quot;区域&quot;}],&quot;data&quot;:&quot;mainData&quot;,&quot;flexibleWidth&quot;:false,&quot;responsive&quot;:true,&quot;rowActiveClass&quot;:&quot;active&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/dataTables/dataTables'}" data-events="onRowSelect:listDataRowSelect;onRowDblClick:grid3RowClick" __cid="cb2YfAj"></table>  
+        <div component="$model/UI2/system/components/justep/pagerBar/pagerBar" class="x-pagerbar container-fluid cb2YfAj" xid="pageBar" data-bind="component:{name:'$model/UI2/system/components/justep/pagerBar/pagerBar'}" data-config="{&quot;data&quot;:&quot;mainData&quot;}" __cid="cb2YfAj"> 
+          <div class="row cb2YfAj" xid="div1" __cid="cb2YfAj"> 
+            <div class="col-sm-3 cb2YfAj" xid="div2" __cid="cb2YfAj"> 
+              <div class="x-pagerbar-length cb2YfAj" xid="div3" __cid="cb2YfAj"> 
+                <label component="$model/UI2/system/components/justep/pagerLimitSelect/pagerLimitSelect" class="x-pagerlimitselect cb2YfAj" xid="limitSelect1" data-bind="component:{name:'$model/UI2/system/components/justep/pagerLimitSelect/pagerLimitSelect'}" data-config="{&quot;data&quot;:&quot;mainData&quot;}" __cid="cb2YfAj"> 
+                  <span xid="span2" __cid="cb2YfAj" class="cb2YfAj">显示</span>  
+                  <select component="$model/UI2/system/components/justep/select/select" class="form-control input-sm cb2YfAj" xid="select1" data-bind="component:{name:'$model/UI2/system/components/justep/select/select'}" __cid="cb2YfAj"> 
+                    <option value="10" xid="default1" __cid="cb2YfAj" class="cb2YfAj">10</option>  
+                    <option value="20" xid="default2" __cid="cb2YfAj" class="cb2YfAj">20</option>  
+                    <option value="50" xid="default3" __cid="cb2YfAj" class="cb2YfAj">50</option>  
+                    <option value="100" xid="default4" __cid="cb2YfAj" class="cb2YfAj">100</option> 
+                  </select>  
+                  <span xid="span5" __cid="cb2YfAj" class="cb2YfAj">条</span> 
+                </label> 
+              </div> 
+            </div>  
+            <div class="col-sm-3 cb2YfAj" xid="div4" __cid="cb2YfAj"> 
+              <div class="x-pagerbar-info cb2YfAj" xid="div5" __cid="cb2YfAj">当前显示1-10条，共16条</div> 
+            </div>  
+            <div class="col-sm-6 cb2YfAj" xid="div6" __cid="cb2YfAj"> 
+              <div class="x-pagerbar-pagination cb2YfAj" xid="div7" __cid="cb2YfAj"> 
+                <ul class="pagination cb2YfAj" component="$model/UI2/system/components/bootstrap/pagination/pagination" xid="pagination1" data-bind="component:{name:'$model/UI2/system/components/bootstrap/pagination/pagination'}" data-config="{&quot;data&quot;:&quot;mainData&quot;}" __cid="cb2YfAj"> 
+                  <li class="prev cb2YfAj" xid="li1" __cid="cb2YfAj"> 
+                    <a href="#" xid="a1" __cid="cb2YfAj" class="cb2YfAj"> 
+                      <span aria-hidden="true" xid="span6" __cid="cb2YfAj" class="cb2YfAj">«</span>  
+                      <span class="sr-only cb2YfAj" xid="span7" __cid="cb2YfAj">Previous</span> 
+                    </a> 
+                  </li>  
+                  <li class="next cb2YfAj" xid="li2" __cid="cb2YfAj"> 
+                    <a href="#" xid="a2" __cid="cb2YfAj" class="cb2YfAj"> 
+                      <span aria-hidden="true" xid="span8" __cid="cb2YfAj" class="cb2YfAj">»</span>  
+                      <span class="sr-only cb2YfAj" xid="span9" __cid="cb2YfAj">Next</span> 
+                    </a> 
+                  </li> 
+                </ul> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div>  
+      <div class="tab-pane cb2YfAj" xid="detail" __cid="cb2YfAj"> 
+        <div xid="detailBar" component="$model/UI2/system/components/justep/toolBar/toolBar" class="x-toolbar x-toolbar-spliter form-inline cb2YfAj" data-bind="component:{name:'$model/UI2/system/components/justep/toolBar/toolBar'}" __cid="cb2YfAj"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cb2YfAj" xid="newBtn2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:addBtnClick" data-config="{&quot;disabled&quot;:true,&quot;icon&quot;:&quot;icon-plus&quot;,&quot;label&quot;:&quot;添加&quot;}" __cid="cb2YfAj"> 
+            <i class="icon-plus cb2YfAj" xid="i3" __cid="cb2YfAj"/>  
+            <span xid="span1" __cid="cb2YfAj" class="cb2YfAj">添加</span> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cb2YfAj" xid="saveBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'mainData.save'}" data-config="{&quot;label&quot;:&quot; 保存&quot;}" __cid="cb2YfAj"> 
+            <i __cid="cb2YfAj" class="cb2YfAj"/>  
+            <span __cid="cb2YfAj" class="cb2YfAj">保存</span> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cb2YfAj" xid="delBtn2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:delBtn2Click" data-config="{&quot;icon&quot;:&quot;icon-minus&quot;,&quot;label&quot;:&quot;删除&quot;}" __cid="cb2YfAj"> 
+            <i xid="i2" class="icon-minus cb2YfAj" __cid="cb2YfAj"/>  
+            <span xid="label6" __cid="cb2YfAj" class="cb2YfAj">删除</span> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cb2YfAj" xid="button5" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;mainData.refresh&quot;}" __cid="cb2YfAj"> 
+            <i xid="i8" __cid="cb2YfAj" class="cb2YfAj"/>  
+            <span xid="span12" __cid="cb2YfAj" class="cb2YfAj"/> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cb2YfAj" xid="preBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;mainData.prevRow&quot;}" __cid="cb2YfAj"> 
+            <i xid="i4" __cid="cb2YfAj" class="cb2YfAj"/>  
+            <span xid="span3" __cid="cb2YfAj" class="cb2YfAj"/> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cb2YfAj" xid="nextBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;mainData.nextRow&quot;}" __cid="cb2YfAj"> 
+            <i xid="i5" __cid="cb2YfAj" class="cb2YfAj"/>  
+            <span xid="span4" __cid="cb2YfAj" class="cb2YfAj"/> 
+          </a>  
+          <span component="$model/UI2/system/components/justep/button/checkbox" class="x-checkbox cb2YfAj" xid="checkbox1" label="编辑" checkedValue="是" uncheckedValue="否" checked="false" data-config="{&quot;checked&quot;:false,&quot;checkedValue&quot;:&quot;是&quot;,&quot;disabled&quot;:false,&quot;label&quot;:&quot;编辑&quot;,&quot;uncheckedValue&quot;:&quot;否&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/checkbox'}" data-events="onChange:checkbox1Change" __cid="cb2YfAj"> 
+            <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="checkbox" __cid="cb2YfAj" class="cb2YfAj"></input>  
+            <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cb2YfAj" class="cb2YfAj">编辑</label> 
+          </span>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link  cb2YfAj" xid="OKBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},enable:canOK" data-events="onClick:OKBtnClick" data-config="{&quot;disabled&quot;:true,&quot;label&quot;:&quot;确定&quot;}" __cid="cb2YfAj"> 
+            <i xid="i1" __cid="cb2YfAj" class="cb2YfAj"/>  
+            <span xid="span1" __cid="cb2YfAj" class="cb2YfAj">确定</span> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-label  cb2YfAj" xid="cancelBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;windowReceiver.windowCancel&quot;}" data-config="{&quot;disabled&quot;:true,&quot;label&quot;:&quot;取消&quot;}" __cid="cb2YfAj"> 
+            <i xid="i2" __cid="cb2YfAj" class="cb2YfAj"/>  
+            <span xid="span2" __cid="cb2YfAj" class="cb2YfAj">取消</span> 
+          </a> 
+        </div>  
+        <div class="container-fluid cb2YfAj" __cid="cb2YfAj"> 
+          <div component="$model/UI2/system/components/justep/controlGroup/controlGroup" class="x-control-group cb2YfAj" data-bind="component:{name:'$model/UI2/system/components/justep/controlGroup/controlGroup'}" data-config="{&quot;collapsible&quot;:true,&quot;title&quot;:&quot;详细&quot;}" __cid="cb2YfAj"> 
+            <div class="x-control-group-title cb2YfAj" __cid="cb2YfAj">详细</div>  
+            <div xid="mainForm" class="form-horizontal cb2YfAj" component="$model/UI2/system/components/bootstrap/form/form" style="margin:30px 10px" data-bind="component:{name:'$model/UI2/system/components/bootstrap/form/form'}" __cid="cb2YfAj"> 
+              <div xid="formGroup1" class="form-group cb2YfAj" __cid="cb2YfAj"> 
+                <div xid="col11" class="col-sm-2 cb2YfAj" __cid="cb2YfAj"> 
+                  <label xid="versionL" class="control-label cb2YfAj" __cid="cb2YfAj" data-bind="text:mainData.label('version')"/> 
+                </div>  
+                <div xid="col12" class="col-sm-10 cb2YfAj" __cid="cb2YfAj"> 
+                  <input xid="version" class="form-control cb2YfAj" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:mainData.ref('version'),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;readonly&quot;:true}" __cid="cb2YfAj"/> 
+                </div> 
+              </div>  
+              <div xid="formGroup2" class="form-group cb2YfAj" __cid="cb2YfAj"> 
+                <div xid="col21" class="col-sm-2 cb2YfAj" __cid="cb2YfAj"> 
+                  <label xid="fKHBML" class="control-label cb2YfAj" __cid="cb2YfAj" data-bind="text:mainData.label('fKHBM')"/> 
+                </div>  
+                <div xid="col22" class="col-sm-10 cb2YfAj" __cid="cb2YfAj"> 
+                  <input xid="fKHBM" class="form-control cb2YfAj" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:mainData.ref('fKHBM'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cb2YfAj"/> 
+                </div> 
+              </div>  
+              <div xid="formGroup3" class="form-group cb2YfAj" __cid="cb2YfAj"> 
+                <div xid="col31" class="col-sm-2 cb2YfAj" __cid="cb2YfAj"> 
+                  <label xid="fKHMCL" class="control-label cb2YfAj" __cid="cb2YfAj" data-bind="text:mainData.label('fKHMC')"/> 
+                </div>  
+                <div xid="col32" class="col-sm-10 cb2YfAj" __cid="cb2YfAj"> 
+                  <input xid="fKHMC" class="form-control cb2YfAj" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:mainData.ref('fKHMC'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cb2YfAj"/> 
+                </div> 
+              </div>  
+              <div xid="formGroup4" class="form-group cb2YfAj" __cid="cb2YfAj"> 
+                <div xid="col41" class="col-sm-2 cb2YfAj" __cid="cb2YfAj"> 
+                  <label xid="fKHLBL" class="control-label cb2YfAj" __cid="cb2YfAj" data-bind="text:mainData.label('fKHLB')"/> 
+                </div>  
+                <div xid="col42" class="col-sm-10 cb2YfAj" __cid="cb2YfAj"> 
+                  <div class="x-gridSelect cb2YfAj" component="$model/UI2/system/components/justep/gridSelect/gridSelect" xid="typeGridSelect" data-config="{&quot;autoOptionWidth&quot;:false,&quot;disabled&quot;:false,&quot;inputChangeable&quot;:false,&quot;inputFilterable&quot;:false,&quot;optionCfg&quot;:{&quot;colModel&quot;:[{&quot;name&quot;:&quot;fFLMC&quot;}],&quot;data&quot;:&quot;typeData&quot;,&quot;label&quot;:&quot;fFLMC&quot;,&quot;value&quot;:&quot;CU_KHFL&quot;,&quot;xid&quot;:&quot;option7&quot;},&quot;optionHeight&quot;:300}" data-bind="component:{ref:$model.mainData.ref(&quot;fKHLB&quot;),name:'$model/UI2/system/components/justep/gridSelect/gridSelect'}" __cid="cb2YfAj"> 
+                    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-option cb2YfAj" __cid="cb2YfAj"></div>  
+                    <input xmlns:xhtml="http://www.w3.org/1999/xhtml" class="form-control x-gridSelect-input cb2YfAj" __cid="cb2YfAj"></input>  
+                    <span xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-clear icon-close-circled hide cb2YfAj" __cid="cb2YfAj"></span> 
+                  </div> 
+                </div> 
+              </div>  
+              <div xid="formGroup5" class="form-group cb2YfAj" __cid="cb2YfAj"> 
+                <div xid="col51" class="col-sm-2 cb2YfAj" __cid="cb2YfAj"> 
+                  <label xid="fSZQYL" class="control-label cb2YfAj" __cid="cb2YfAj" data-bind="text:mainData.label('fSZQY')"/> 
+                </div>  
+                <div xid="col52" class="col-sm-10 cb2YfAj" __cid="cb2YfAj"> 
+                  <div class="x-gridSelect cb2YfAj" component="$model/UI2/system/components/justep/gridSelect/gridSelect" xid="areaGridSelect" data-config="{&quot;autoOptionWidth&quot;:false,&quot;disabled&quot;:false,&quot;inputChangeable&quot;:false,&quot;inputFilterable&quot;:false,&quot;optionCfg&quot;:{&quot;colModel&quot;:[{&quot;name&quot;:&quot;fFLMC&quot;}],&quot;data&quot;:&quot;areaData&quot;,&quot;label&quot;:&quot;fFLMC&quot;,&quot;value&quot;:&quot;CU_QYXX&quot;,&quot;xid&quot;:&quot;option6&quot;},&quot;optionHeight&quot;:300}" data-bind="component:{ref:$model.mainData.ref(&quot;fSZQY&quot;),name:'$model/UI2/system/components/justep/gridSelect/gridSelect'}" __cid="cb2YfAj"> 
+                    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-option cb2YfAj" __cid="cb2YfAj"></div>  
+                    <input xmlns:xhtml="http://www.w3.org/1999/xhtml" class="form-control x-gridSelect-input cb2YfAj" __cid="cb2YfAj"></input>  
+                    <span xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-clear icon-close-circled hide cb2YfAj" __cid="cb2YfAj"></span> 
+                  </div> 
+                </div> 
+              </div>  
+              <div xid="formGroup6" class="form-group cb2YfAj" __cid="cb2YfAj"> 
+                <div xid="col61" class="col-sm-2 cb2YfAj" __cid="cb2YfAj"> 
+                  <label xid="fLXRL" class="control-label cb2YfAj" __cid="cb2YfAj" data-bind="text:mainData.label('fLXR')"/> 
+                </div>  
+                <div xid="col62" class="col-sm-10 cb2YfAj" __cid="cb2YfAj"> 
+                  <input xid="fLXR" class="form-control cb2YfAj" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:mainData.ref('fLXR'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cb2YfAj"/> 
+                </div> 
+              </div>  
+              <div xid="formGroup7" class="form-group cb2YfAj" __cid="cb2YfAj"> 
+                <div xid="col71" class="col-sm-2 cb2YfAj" __cid="cb2YfAj"> 
+                  <label xid="fLXDHL" class="control-label cb2YfAj" __cid="cb2YfAj" data-bind="text:mainData.label('fLXDH')"/> 
+                </div>  
+                <div xid="col72" class="col-sm-10 cb2YfAj" __cid="cb2YfAj"> 
+                  <input xid="fLXDH" class="form-control cb2YfAj" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:mainData.ref('fLXDH'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cb2YfAj"/> 
+                </div> 
+              </div>  
+              <div xid="formGroup8" class="form-group cb2YfAj" __cid="cb2YfAj"> 
+                <div xid="col81" class="col-sm-2 cb2YfAj" __cid="cb2YfAj"> 
+                  <label xid="fYDDHL" class="control-label cb2YfAj" __cid="cb2YfAj" data-bind="text:mainData.label('fYDDH')"/> 
+                </div>  
+                <div xid="col82" class="col-sm-10 cb2YfAj" __cid="cb2YfAj"> 
+                  <input xid="fYDDH" class="form-control cb2YfAj" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:mainData.ref('fYDDH'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cb2YfAj"/> 
+                </div> 
+              </div>  
+              <div xid="formGroup9" class="form-group cb2YfAj" __cid="cb2YfAj"> 
+                <div xid="col91" class="col-sm-2 cb2YfAj" __cid="cb2YfAj"> 
+                  <label xid="fLXQQL" class="control-label cb2YfAj" __cid="cb2YfAj" data-bind="text:mainData.label('fLXQQ')"/> 
+                </div>  
+                <div xid="col92" class="col-sm-10 cb2YfAj" __cid="cb2YfAj"> 
+                  <input xid="fLXQQ" class="form-control cb2YfAj" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:mainData.ref('fLXQQ'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cb2YfAj"/> 
+                </div> 
+              </div>  
+              <div xid="formGroup10" class="form-group cb2YfAj" __cid="cb2YfAj"> 
+                <div xid="col101" class="col-sm-2 cb2YfAj" __cid="cb2YfAj"> 
+                  <label xid="fLXWXL" class="control-label cb2YfAj" __cid="cb2YfAj" data-bind="text:mainData.label('fLXWX')"/> 
+                </div>  
+                <div xid="col102" class="col-sm-10 cb2YfAj" __cid="cb2YfAj"> 
+                  <input xid="fLXWX" class="form-control cb2YfAj" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:mainData.ref('fLXWX'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cb2YfAj"/> 
+                </div> 
+              </div>  
+              <div xid="formGroup11" class="form-group cb2YfAj" __cid="cb2YfAj"> 
+                <div xid="col111" class="col-sm-2 cb2YfAj" __cid="cb2YfAj"> 
+                  <label xid="fSHDZL" class="control-label cb2YfAj" __cid="cb2YfAj" data-bind="text:mainData.label('fSHDZ')"/> 
+                </div>  
+                <div xid="col112" class="col-sm-10 cb2YfAj" __cid="cb2YfAj"> 
+                  <input xid="fSHDZ" class="form-control cb2YfAj" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:mainData.ref('fSHDZ'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cb2YfAj"/> 
+                </div> 
+              </div>  
+              <div xid="formGroup12" class="form-group cb2YfAj" __cid="cb2YfAj"> 
+                <div xid="col121" class="col-sm-2 cb2YfAj" __cid="cb2YfAj"> 
+                  <label xid="fJSFSL" class="control-label cb2YfAj" __cid="cb2YfAj" data-bind="text:mainData.label('fJSFS')"/> 
+                </div>  
+                <div xid="col122" class="col-sm-10 cb2YfAj" __cid="cb2YfAj"> 
+                  <div class="x-gridSelect cb2YfAj" component="$model/UI2/system/components/justep/gridSelect/gridSelect" xid="jsGridSelect" data-config="{&quot;autoOptionWidth&quot;:false,&quot;disabled&quot;:false,&quot;inputChangeable&quot;:false,&quot;inputFilterable&quot;:false,&quot;optionCfg&quot;:{&quot;colModel&quot;:[{&quot;name&quot;:&quot;type&quot;}],&quot;data&quot;:&quot;jsData&quot;,&quot;label&quot;:&quot;type&quot;,&quot;value&quot;:&quot;type&quot;,&quot;xid&quot;:&quot;option5&quot;},&quot;optionHeight&quot;:300}" data-bind="component:{ref:$model.mainData.ref(&quot;fJSFS&quot;),name:'$model/UI2/system/components/justep/gridSelect/gridSelect'}" __cid="cb2YfAj"> 
+                    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-option cb2YfAj" __cid="cb2YfAj"></div>  
+                    <input xmlns:xhtml="http://www.w3.org/1999/xhtml" class="form-control x-gridSelect-input cb2YfAj" __cid="cb2YfAj"></input>  
+                    <span xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-clear icon-close-circled hide cb2YfAj" __cid="cb2YfAj"></span> 
+                  </div> 
+                </div> 
+              </div>  
+              <div xid="formGroup14" class="form-group cb2YfAj" __cid="cb2YfAj"> 
+                <div xid="col141" class="col-sm-2 cb2YfAj" __cid="cb2YfAj"> 
+                  <label xid="fGZRL" class="control-label cb2YfAj" __cid="cb2YfAj" data-bind="text:mainData.label('fGZR')"/> 
+                </div>  
+                <div xid="col142" class="col-sm-10 cb2YfAj" __cid="cb2YfAj"> 
+                  <div class="x-gridSelect cb2YfAj" component="$model/UI2/system/components/justep/gridSelect/gridSelect" xid="personGridSelect" disabled="true" data-config="{&quot;autoOptionWidth&quot;:false,&quot;disabled&quot;:true,&quot;inputChangeable&quot;:false,&quot;inputFilterable&quot;:false,&quot;optionCfg&quot;:{&quot;colModel&quot;:[{&quot;name&quot;:&quot;fZYMC&quot;}],&quot;data&quot;:&quot;personData&quot;,&quot;label&quot;:&quot;fZYMC&quot;,&quot;value&quot;:&quot;CU_ZYXX&quot;,&quot;xid&quot;:&quot;option1&quot;},&quot;optionHeight&quot;:300}" data-bind="component:{ref:$model.mainData.ref(&quot;fGZR&quot;),name:'$model/UI2/system/components/justep/gridSelect/gridSelect'}" __cid="cb2YfAj"> 
+                    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-option cb2YfAj" __cid="cb2YfAj"></div>  
+                    <input xmlns:xhtml="http://www.w3.org/1999/xhtml" class="form-control x-gridSelect-input cb2YfAj" disabled="disabled" __cid="cb2YfAj"></input>  
+                    <span xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-clear icon-close-circled hide cb2YfAj" __cid="cb2YfAj"></span> 
+                  </div> 
+                </div> 
+              </div>  
+              <div xid="formGroup13" class="form-group cb2YfAj" __cid="cb2YfAj"> 
+                <div xid="col131" class="col-sm-2 cb2YfAj" __cid="cb2YfAj"> 
+                  <label xid="fBZL" class="control-label cb2YfAj" __cid="cb2YfAj" data-bind="text:mainData.label('fBZ')"/> 
+                </div>  
+                <div xid="col132" class="col-sm-10 cb2YfAj" __cid="cb2YfAj"> 
+                  <textarea xid="fBZ" class="form-control cb2YfAj" component="$model/UI2/system/components/justep/textarea/textarea" style="height:120px;" data-bind="component:{ref:mainData.ref('fBZ'),name:'$model/UI2/system/components/justep/textarea/textarea'}" __cid="cb2YfAj"/> 
+                </div> 
+              </div>  
+              <div xid="formGroup22" class="form-group cb2YfAj" __cid="cb2YfAj"> 
+                <div xid="col221" class="col-sm-2 cb2YfAj" __cid="cb2YfAj"> 
+                  <label xid="fWHSJL" class="control-label cb2YfAj" __cid="cb2YfAj" data-bind="text:mainData.label('fWHSJ')"/> 
+                </div>  
+                <div xid="col222" class="col-sm-10 cb2YfAj" __cid="cb2YfAj"> 
+                  <input xid="fWHSJ" class="form-control cb2YfAj" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:mainData.ref('fWHSJ'),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;readonly&quot;:true}" __cid="cb2YfAj"/> 
+                </div> 
+              </div>  
+              <div xid="formGroup23" class="form-group cb2YfAj" __cid="cb2YfAj"> 
+                <div xid="col231" class="col-sm-2 cb2YfAj" __cid="cb2YfAj"> 
+                  <label xid="fWHRL" class="control-label cb2YfAj" __cid="cb2YfAj" data-bind="text:mainData.label('fWHR')"/> 
+                </div>  
+                <div xid="col232" class="col-sm-10 cb2YfAj" __cid="cb2YfAj"> 
+                  <input xid="fWHR" class="form-control cb2YfAj" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:mainData.ref('fWHR'),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;readonly&quot;:true}" __cid="cb2YfAj"/> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+</div>

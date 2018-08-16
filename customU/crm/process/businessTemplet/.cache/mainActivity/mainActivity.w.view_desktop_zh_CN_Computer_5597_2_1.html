@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" xid="window" design="device:pc;" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cBJJjmq" class="cBJJjmq" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/pagerBar/pagerBar,$model/UI2/system/components/bootstrap/form/form,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/controlGroup/controlGroup,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/bootstrap/pagination/pagination,$model/UI2/system/components/justep/smartFilter/smartFilter,$model/UI2/system/components/justep/data/bizData,$model/UI2/system/components/justep/toolBar/toolBar,$model/UI2/system/components/justep/textarea/textarea,$model/UI2/system/components/justep/dataTables/dataTables,$model/UI2/system/components/bootstrap/tabs/tab,$model/UI2/system/components/justep/button/checkbox,$model/UI2/system/components/justep/pagerLimitSelect/pagerLimitSelect,$model/UI2/system/components/justep/select/select,$model/UI2/system/components/justep/gridSelect/gridSelect,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/bootstrap/tabs/tabs,">  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="cBJJjmq" class="cBJJjmq"/>  
+  <div xmlns="" component="$model/UI2/system/components/bootstrap/tabs/tabs" xid="tabs" data-bind="component:{name:'$model/UI2/system/components/bootstrap/tabs/tabs'}" __cid="cBJJjmq" class="cBJJjmq"> 
+    <ul class="nav nav-tabs cBJJjmq" xid="navs" __cid="cBJJjmq"> 
+      <li class="active cBJJjmq" xid="nav-list" component="$model/UI2/system/components/bootstrap/tabs/tab" data-bind="component:{name:'$model/UI2/system/components/bootstrap/tabs/tab'}" __cid="cBJJjmq"> 
+        <a content="list" xid="tabItem1" __cid="cBJJjmq" class="cBJJjmq">列表</a> 
+      </li>  
+      <li role="presentation" xid="nav-detail" component="$model/UI2/system/components/bootstrap/tabs/tab" data-bind="component:{name:'$model/UI2/system/components/bootstrap/tabs/tab'}" __cid="cBJJjmq" class="cBJJjmq"> 
+        <a content="detail" xid="tabItem2" __cid="cBJJjmq" class="cBJJjmq">详细</a> 
+      </li> 
+    </ul>  
+    <div class="tab-content cBJJjmq" xid="contents" __cid="cBJJjmq"> 
+      <div class="tab-pane active cBJJjmq" xid="list" __cid="cBJJjmq"> 
+        <div xid="bar" component="$model/UI2/system/components/justep/toolBar/toolBar" class="x-toolbar x-toolbar-spliter form-inline cBJJjmq" data-bind="component:{name:'$model/UI2/system/components/justep/toolBar/toolBar'}" __cid="cBJJjmq"> 
+          <div component="$model/UI2/system/components/justep/smartFilter/smartFilter" xid="smartFilter1" class="pull-right cBJJjmq" data-bind="component:{name:'$model/UI2/system/components/justep/smartFilter/smartFilter'}" data-config="{&quot;filterCols&quot;:&quot;fXXBM,fMBMC,fMBZX,fWHSJ,fWHR&quot;,&quot;filterData&quot;:&quot;mainData&quot;}" __cid="cBJJjmq"> 
+            <input type="text" class="form-control cBJJjmq" placeholder="搜索" data-bind="valueUpdate: ['input', 'afterkeydown'],value:$model.comp($element.parentElement).searchText,event:{change:$model.comp($element.parentElement).onInputChange.bind($model.comp($element.parentElement))}" xid="input4" __cid="cBJJjmq"/> 
+          </div>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cBJJjmq" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:addBtnClick" data-config="{&quot;icon&quot;:&quot;icon-plus&quot;,&quot;label&quot;:&quot; 新建&quot;}" __cid="cBJJjmq"> 
+            <i class="icon-plus cBJJjmq" __cid="cBJJjmq"/>  
+            <span __cid="cBJJjmq" class="cBJJjmq">新建</span> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cBJJjmq" xid="delBtn1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:delBtn1Click" data-config="{&quot;icon&quot;:&quot;icon-minus&quot;,&quot;label&quot;:&quot;删除&quot;}" __cid="cBJJjmq"> 
+            <i xid="i7" class="icon-minus cBJJjmq" __cid="cBJJjmq"/>  
+            <span xid="span11" __cid="cBJJjmq" class="cBJJjmq">删除</span> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cBJJjmq" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;mainData.refresh&quot;}" __cid="cBJJjmq"> 
+            <i xid="i6" __cid="cBJJjmq" class="cBJJjmq"/>  
+            <span xid="span10" __cid="cBJJjmq" class="cBJJjmq">刷新</span> 
+          </a> 
+        </div>  
+        <table xmlns:xhtml="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/dataTables/dataTables" flexibleWidth="false" class="table table-hover table-striped hidder-xs cBJJjmq" xid="listData" data="mainData" rowActiveClass="active" responsive="true" data-config="{&quot;columns&quot;:[{&quot;sName&quot;:&quot;fXXBM&quot;},{&quot;sName&quot;:&quot;fMBMC&quot;},{&quot;sName&quot;:&quot;fMBZX&quot;},{&quot;sName&quot;:&quot;fWHSJ&quot;},{&quot;sName&quot;:&quot;fWHR&quot;}],&quot;data&quot;:&quot;mainData&quot;,&quot;flexibleWidth&quot;:false,&quot;responsive&quot;:true,&quot;rowActiveClass&quot;:&quot;active&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/dataTables/dataTables'}" data-events="onRowDblClick:grid3RowClick" __cid="cBJJjmq"></table>  
+        <div component="$model/UI2/system/components/justep/pagerBar/pagerBar" class="x-pagerbar container-fluid cBJJjmq" xid="pageBar" data-bind="component:{name:'$model/UI2/system/components/justep/pagerBar/pagerBar'}" data-config="{&quot;data&quot;:&quot;mainData&quot;}" __cid="cBJJjmq"> 
+          <div class="row cBJJjmq" xid="div1" __cid="cBJJjmq"> 
+            <div class="col-sm-3 cBJJjmq" xid="div2" __cid="cBJJjmq"> 
+              <div class="x-pagerbar-length cBJJjmq" xid="div3" __cid="cBJJjmq"> 
+                <label component="$model/UI2/system/components/justep/pagerLimitSelect/pagerLimitSelect" class="x-pagerlimitselect cBJJjmq" xid="limitSelect1" data-bind="component:{name:'$model/UI2/system/components/justep/pagerLimitSelect/pagerLimitSelect'}" data-config="{&quot;data&quot;:&quot;mainData&quot;}" __cid="cBJJjmq"> 
+                  <span xid="span2" __cid="cBJJjmq" class="cBJJjmq">显示</span>  
+                  <select component="$model/UI2/system/components/justep/select/select" class="form-control input-sm cBJJjmq" xid="select1" data-bind="component:{name:'$model/UI2/system/components/justep/select/select'}" __cid="cBJJjmq"> 
+                    <option value="10" xid="default1" __cid="cBJJjmq" class="cBJJjmq">10</option>  
+                    <option value="20" xid="default2" __cid="cBJJjmq" class="cBJJjmq">20</option>  
+                    <option value="50" xid="default3" __cid="cBJJjmq" class="cBJJjmq">50</option>  
+                    <option value="100" xid="default4" __cid="cBJJjmq" class="cBJJjmq">100</option> 
+                  </select>  
+                  <span xid="span5" __cid="cBJJjmq" class="cBJJjmq">条</span> 
+                </label> 
+              </div> 
+            </div>  
+            <div class="col-sm-3 cBJJjmq" xid="div4" __cid="cBJJjmq"> 
+              <div class="x-pagerbar-info cBJJjmq" xid="div5" __cid="cBJJjmq">当前显示1-10条，共16条</div> 
+            </div>  
+            <div class="col-sm-6 cBJJjmq" xid="div6" __cid="cBJJjmq"> 
+              <div class="x-pagerbar-pagination cBJJjmq" xid="div7" __cid="cBJJjmq"> 
+                <ul class="pagination cBJJjmq" component="$model/UI2/system/components/bootstrap/pagination/pagination" xid="pagination1" data-bind="component:{name:'$model/UI2/system/components/bootstrap/pagination/pagination'}" data-config="{&quot;data&quot;:&quot;mainData&quot;}" __cid="cBJJjmq"> 
+                  <li class="prev cBJJjmq" xid="li1" __cid="cBJJjmq"> 
+                    <a href="#" xid="a1" __cid="cBJJjmq" class="cBJJjmq"> 
+                      <span aria-hidden="true" xid="span6" __cid="cBJJjmq" class="cBJJjmq">«</span>  
+                      <span class="sr-only cBJJjmq" xid="span7" __cid="cBJJjmq">Previous</span> 
+                    </a> 
+                  </li>  
+                  <li class="next cBJJjmq" xid="li2" __cid="cBJJjmq"> 
+                    <a href="#" xid="a2" __cid="cBJJjmq" class="cBJJjmq"> 
+                      <span aria-hidden="true" xid="span8" __cid="cBJJjmq" class="cBJJjmq">»</span>  
+                      <span class="sr-only cBJJjmq" xid="span9" __cid="cBJJjmq">Next</span> 
+                    </a> 
+                  </li> 
+                </ul> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div>  
+      <div class="tab-pane cBJJjmq" xid="detail" __cid="cBJJjmq"> 
+        <div xid="detailBar" component="$model/UI2/system/components/justep/toolBar/toolBar" class="x-toolbar x-toolbar-spliter form-inline cBJJjmq" data-bind="component:{name:'$model/UI2/system/components/justep/toolBar/toolBar'}" __cid="cBJJjmq"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cBJJjmq" xid="newBtn2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:addBtnClick" data-config="{&quot;disabled&quot;:true,&quot;icon&quot;:&quot;icon-plus&quot;,&quot;label&quot;:&quot;添加&quot;}" __cid="cBJJjmq"> 
+            <i class="icon-plus cBJJjmq" xid="i3" __cid="cBJJjmq"/>  
+            <span xid="span1" __cid="cBJJjmq" class="cBJJjmq">添加</span> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cBJJjmq" xid="saveBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'mainData.save'}" data-config="{&quot;label&quot;:&quot; 保存&quot;}" __cid="cBJJjmq"> 
+            <i __cid="cBJJjmq" class="cBJJjmq"/>  
+            <span __cid="cBJJjmq" class="cBJJjmq">保存</span> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cBJJjmq" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button2Click" data-config="{&quot;icon&quot;:&quot;icon-minus&quot;,&quot;label&quot;:&quot;删除&quot;}" __cid="cBJJjmq"> 
+            <i xid="i2" class="icon-minus cBJJjmq" __cid="cBJJjmq"/>  
+            <span xid="label6" __cid="cBJJjmq" class="cBJJjmq">删除</span> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cBJJjmq" xid="button5" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;mainData.refresh&quot;}" __cid="cBJJjmq"> 
+            <i xid="i8" __cid="cBJJjmq" class="cBJJjmq"/>  
+            <span xid="span12" __cid="cBJJjmq" class="cBJJjmq"/> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cBJJjmq" xid="preBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;mainData.prevRow&quot;}" __cid="cBJJjmq"> 
+            <i xid="i4" __cid="cBJJjmq" class="cBJJjmq"/>  
+            <span xid="span3" __cid="cBJJjmq" class="cBJJjmq"/> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cBJJjmq" xid="nextBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;mainData.nextRow&quot;}" __cid="cBJJjmq"> 
+            <i xid="i5" __cid="cBJJjmq" class="cBJJjmq"/>  
+            <span xid="span4" __cid="cBJJjmq" class="cBJJjmq"/> 
+          </a>  
+          <span component="$model/UI2/system/components/justep/button/checkbox" class="x-checkbox cBJJjmq" xid="checkbox1" label="编辑" checkedValue="是" uncheckedValue="否" checked="false" data-config="{&quot;checked&quot;:false,&quot;checkedValue&quot;:&quot;是&quot;,&quot;disabled&quot;:false,&quot;label&quot;:&quot;编辑&quot;,&quot;uncheckedValue&quot;:&quot;否&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/checkbox'}" data-events="onChange:checkbox1Change" __cid="cBJJjmq"> 
+            <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="checkbox" __cid="cBJJjmq" class="cBJJjmq"></input>  
+            <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cBJJjmq" class="cBJJjmq">编辑</label> 
+          </span> 
+        </div>  
+        <div class="container-fluid cBJJjmq" __cid="cBJJjmq"> 
+          <div component="$model/UI2/system/components/justep/controlGroup/controlGroup" class="x-control-group cBJJjmq" data-bind="component:{name:'$model/UI2/system/components/justep/controlGroup/controlGroup'}" data-config="{&quot;collapsible&quot;:true,&quot;title&quot;:&quot;详细&quot;}" __cid="cBJJjmq"> 
+            <div class="x-control-group-title cBJJjmq" __cid="cBJJjmq">详细</div>  
+            <div xid="mainForm" class="form-horizontal cBJJjmq" component="$model/UI2/system/components/bootstrap/form/form" style="margin:30px 10px" data-bind="component:{name:'$model/UI2/system/components/bootstrap/form/form'}" __cid="cBJJjmq"> 
+              <div xid="formGroup1" class="form-group cBJJjmq" __cid="cBJJjmq"> 
+                <div xid="col11" class="col-sm-2 cBJJjmq" __cid="cBJJjmq"> 
+                  <label xid="versionL" class="control-label cBJJjmq" __cid="cBJJjmq" data-bind="text:mainData.label('version')"/> 
+                </div>  
+                <div xid="col12" class="col-sm-10 cBJJjmq" __cid="cBJJjmq"> 
+                  <input xid="version" class="form-control cBJJjmq" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:mainData.ref('version'),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;readonly&quot;:true}" __cid="cBJJjmq"/> 
+                </div> 
+              </div>  
+              <div xid="formGroup2" class="form-group cBJJjmq" __cid="cBJJjmq"> 
+                <div xid="col21" class="col-sm-2 cBJJjmq" __cid="cBJJjmq"> 
+                  <label xid="fXXBML" class="control-label cBJJjmq" __cid="cBJJjmq" data-bind="text:mainData.label('fXXBM')"/> 
+                </div>  
+                <div xid="col22" class="col-sm-10 cBJJjmq" __cid="cBJJjmq"> 
+                  <input xid="fXXBM" class="form-control cBJJjmq" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:mainData.ref('fXXBM'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cBJJjmq"/> 
+                </div> 
+              </div>  
+              <div xid="formGroup3" class="form-group cBJJjmq" __cid="cBJJjmq"> 
+                <div xid="col31" class="col-sm-2 cBJJjmq" __cid="cBJJjmq"> 
+                  <label xid="fMBMCL" class="control-label cBJJjmq" __cid="cBJJjmq" data-bind="text:mainData.label('fMBMC')"/> 
+                </div>  
+                <div xid="col32" class="col-sm-10 cBJJjmq" __cid="cBJJjmq"> 
+                  <input xid="fMBMC" class="form-control cBJJjmq" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:mainData.ref('fMBMC'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cBJJjmq"/> 
+                </div> 
+              </div>  
+              <div xid="formGroup4" class="form-group cBJJjmq" __cid="cBJJjmq"> 
+                <div xid="col41" class="col-sm-2 cBJJjmq" __cid="cBJJjmq"> 
+                  <label xid="fMBNRL" class="control-label cBJJjmq" __cid="cBJJjmq" data-bind="text:mainData.label('fMBNR')"/> 
+                </div>  
+                <div xid="col42" class="col-sm-10 cBJJjmq" __cid="cBJJjmq"> 
+                  <textarea xid="fMBNR" class="form-control cBJJjmq" component="$model/UI2/system/components/justep/textarea/textarea" style="height:120px;" data-bind="component:{ref:mainData.ref('fMBNR'),name:'$model/UI2/system/components/justep/textarea/textarea'}" __cid="cBJJjmq"/> 
+                </div> 
+              </div>  
+              <div xid="formGroup5" class="form-group cBJJjmq" __cid="cBJJjmq"> 
+                <div xid="col51" class="col-sm-2 cBJJjmq" __cid="cBJJjmq"> 
+                  <label xid="fMBZXL" class="control-label cBJJjmq" __cid="cBJJjmq" data-bind="text:mainData.label('fMBZX')"/> 
+                </div>  
+                <div xid="col52" class="col-sm-10 cBJJjmq" __cid="cBJJjmq"> 
+                  <div class="x-gridSelect cBJJjmq" component="$model/UI2/system/components/justep/gridSelect/gridSelect" xid="gridSelect1" data-config="{&quot;autoOptionWidth&quot;:false,&quot;disabled&quot;:false,&quot;inputChangeable&quot;:false,&quot;inputFilterable&quot;:false,&quot;optionCfg&quot;:{&quot;colModel&quot;:[{&quot;name&quot;:&quot;type&quot;}],&quot;data&quot;:&quot;typeData&quot;,&quot;label&quot;:&quot;type&quot;,&quot;value&quot;:&quot;type&quot;,&quot;xid&quot;:&quot;option1&quot;},&quot;optionHeight&quot;:300}" data-bind="component:{ref:$model.mainData.ref(&quot;fMBZX&quot;),name:'$model/UI2/system/components/justep/gridSelect/gridSelect'}" __cid="cBJJjmq"> 
+                    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-option cBJJjmq" __cid="cBJJjmq"></div>  
+                    <input xmlns:xhtml="http://www.w3.org/1999/xhtml" class="form-control x-gridSelect-input cBJJjmq" __cid="cBJJjmq"></input>  
+                    <span xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-clear icon-close-circled hide cBJJjmq" __cid="cBJJjmq"></span> 
+                  </div> 
+                </div> 
+              </div>  
+              <div xid="formGroup6" class="form-group cBJJjmq" __cid="cBJJjmq"> 
+                <div xid="col61" class="col-sm-2 cBJJjmq" __cid="cBJJjmq"> 
+                  <label xid="fWHSJL" class="control-label cBJJjmq" __cid="cBJJjmq" data-bind="text:mainData.label('fWHSJ')"/> 
+                </div>  
+                <div xid="col62" class="col-sm-10 cBJJjmq" __cid="cBJJjmq"> 
+                  <input xid="fWHSJ" class="form-control cBJJjmq" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:mainData.ref('fWHSJ'),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;readonly&quot;:true}" __cid="cBJJjmq"/> 
+                </div> 
+              </div>  
+              <div xid="formGroup7" class="form-group cBJJjmq" __cid="cBJJjmq"> 
+                <div xid="col71" class="col-sm-2 cBJJjmq" __cid="cBJJjmq"> 
+                  <label xid="fWHRL" class="control-label cBJJjmq" __cid="cBJJjmq" data-bind="text:mainData.label('fWHR')"/> 
+                </div>  
+                <div xid="col72" class="col-sm-10 cBJJjmq" __cid="cBJJjmq"> 
+                  <input xid="fWHR" class="form-control cBJJjmq" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:mainData.ref('fWHR'),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;readonly&quot;:true}" __cid="cBJJjmq"/> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+</div>

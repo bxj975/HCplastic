@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window ciaiiAj" component="$model/UI2/system/components/justep/window/window" design="device:pc" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="ciaiiAj" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/reportData/reportData,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/justep/report/report,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/windowDialog/windowDialog,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/toolBar/toolBar,">  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="ciaiiAj" class="ciaiiAj"/>  
+  <div xmlns="" component="$model/UI2/system/components/justep/toolBar/toolBar" class="x-toolbar form-inline x-toolbar-spliter ciaiiAj" xid="toolBar1" data-bind="component:{name:'$model/UI2/system/components/justep/toolBar/toolBar'}" __cid="ciaiiAj"> 
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left ciaiiAj" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.pageSetup'}" __cid="ciaiiAj"> 
+      <i xid="i1" __cid="ciaiiAj" class="ciaiiAj"/>  
+      <span xid="span1" __cid="ciaiiAj" class="ciaiiAj"/> 
+    </a>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left ciaiiAj" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.preview'}" __cid="ciaiiAj"> 
+      <i xid="i2" __cid="ciaiiAj" class="ciaiiAj"/>  
+      <span xid="span2" __cid="ciaiiAj" class="ciaiiAj"/> 
+    </a>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left ciaiiAj" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.print'}" __cid="ciaiiAj"> 
+      <i xid="i3" __cid="ciaiiAj" class="ciaiiAj"/>  
+      <span xid="span3" __cid="ciaiiAj" class="ciaiiAj"/> 
+    </a>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left ciaiiAj" xid="button6" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.exportExcel'}" __cid="ciaiiAj"> 
+      <i xid="i6" __cid="ciaiiAj" class="ciaiiAj"/>  
+      <span xid="span6" __cid="ciaiiAj" class="ciaiiAj"/> 
+    </a>  
+    <input component="$model/UI2/system/components/justep/input/input" class="form-control ciaiiAj" xid="inputC" data-bind="component:{ref:$model.selectData.ref(&quot;custom&quot;),name:'$model/UI2/system/components/justep/input/input'},event:{dblclick:$model._callModelFn.bind($model, 'inputCDblclick')}" __cid="ciaiiAj"/>  
+    <input component="$model/UI2/system/components/justep/input/input" class="form-control ciaiiAj" xid="inputB" style="width:137px;" data-bind="component:{ref:$model.selectData.ref(&quot;beginDate&quot;),name:'$model/UI2/system/components/justep/input/input'}" __cid="ciaiiAj"/>  
+    <input component="$model/UI2/system/components/justep/input/input" class="form-control ciaiiAj" xid="inputE" style="width:136px;" data-bind="component:{ref:$model.selectData.ref(&quot;endDate&quot;),name:'$model/UI2/system/components/justep/input/input'}" __cid="ciaiiAj"/>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link ciaiiAj" xid="button4" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button4Click" data-config="{&quot;label&quot;:&quot;确定&quot;}" __cid="ciaiiAj"> 
+      <i xid="i4" __cid="ciaiiAj" class="ciaiiAj"/>  
+      <span xid="span4" __cid="ciaiiAj" class="ciaiiAj">确定</span> 
+    </a> 
+  </div>  
+  <span xmlns="" component="$model/UI2/system/components/justep/windowDialog/windowDialog" xid="windowDialog1" data-bind="component:{name:'$model/UI2/system/components/justep/windowDialog/windowDialog'}" data-config="{&quot;src&quot;:&quot;$model/UI2/custom/crm/process/byorderselect/secondActivity.w&quot;,&quot;status&quot;:&quot;normal&quot;}" __cid="ciaiiAj" class="ciaiiAj"> 
+    <result concept="selectData" operation="modify" origin="dialogData" xid="default3" __cid="ciaiiAj" class="ciaiiAj"> 
+      <mapping from="fKHMC" to="custom" xid="default4" __cid="ciaiiAj" class="ciaiiAj"/> 
+    </result>  
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog-overlay ciaiiAj" __cid="ciaiiAj"></div>  
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog ciaiiAj" style="display:none;" __cid="ciaiiAj">  
+      <div class="x-dialog-title ciaiiAj" __cid="ciaiiAj"> 
+        <button class="close ciaiiAj" __cid="ciaiiAj"> 
+          <span __cid="ciaiiAj" class="ciaiiAj">×</span> 
+        </button>  
+        <div class="x-dialog-title-text ciaiiAj" __cid="ciaiiAj"/> 
+      </div>  
+      <div class="x-dialog-body ciaiiAj" __cid="ciaiiAj"/> 
+    </div> 
+  </span>  
+  <div xmlns="" component="$model/UI2/system/components/justep/report/report" src="@justepContextPath@/v_5597_2_1l_zh_CNs_desktopd_pc/custom/crm/process/byorderselect/byorder_xls.xml" reportName="report" dataList="" class="x-report x-scroll-h ciaiiAj" xid="report1" style="width:137%;" data-bind="component:{name:'$model/UI2/system/components/justep/report/report'}" data-config="{&quot;autoLoad&quot;:true}" __cid="ciaiiAj"> 
+    <span xmlns:xhtml="http://www.w3.org/1999/xhtml" style="display:none" xblid="attribute" paperType="A4" pageWidth="210mm" pageHeight="297mm" orientation="" marginTop="2.4mm" marginBottom="2.4mm" marginLeft="3.7mm" marginRight="3.7mm" marginHeader="" marginFootter="" dataList="p1" cacheFile="%2FUI2%2Fcustom%2Fcrm%2Fprocess%2Fbyorderselect%2F.cache%2FmainActivity.report" __cid="ciaiiAj" class="ciaiiAj"></span>  
+    <div xid="report_report1_content" report-name="report" __cid="ciaiiAj" class="ciaiiAj"/> 
+  </div> 
+</div>

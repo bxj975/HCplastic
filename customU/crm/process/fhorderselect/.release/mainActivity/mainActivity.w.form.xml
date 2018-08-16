@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window c2uuArm" component="$model/UI2/system/components/justep/window/window" design="device:pc" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="c2uuArm" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/reportData/reportData,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/justep/report/report,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/windowDialog/windowDialog,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/toolBar/toolBar,">  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="c2uuArm" class="c2uuArm"></div>  
+  <div component="$model/UI2/system/components/justep/toolBar/toolBar" class="x-toolbar form-inline x-toolbar-spliter c2uuArm" xid="toolBar1" data-bind="component:{name:'$model/UI2/system/components/justep/toolBar/toolBar'}" __cid="c2uuArm"> 
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left c2uuArm" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.pageSetup'}" __cid="c2uuArm"> 
+      <i xid="i1" __cid="c2uuArm" class="c2uuArm"/>  
+      <span xid="span1" __cid="c2uuArm" class="c2uuArm"/> 
+    </a>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left c2uuArm" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.preview'}" __cid="c2uuArm"> 
+      <i xid="i2" __cid="c2uuArm" class="c2uuArm"/>  
+      <span xid="span2" __cid="c2uuArm" class="c2uuArm"/> 
+    </a>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left c2uuArm" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.print'}" __cid="c2uuArm"> 
+      <i xid="i3" __cid="c2uuArm" class="c2uuArm"/>  
+      <span xid="span3" __cid="c2uuArm" class="c2uuArm"/> 
+    </a>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left c2uuArm" xid="button6" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.exportExcel'}" __cid="c2uuArm"> 
+      <i xid="i6" __cid="c2uuArm" class="c2uuArm"/>  
+      <span xid="span6" __cid="c2uuArm" class="c2uuArm"/> 
+    </a>  
+    <input component="$model/UI2/system/components/justep/input/input" class="form-control c2uuArm" xid="inputC" bind-dblclick="inputCDblclick" data-bind="component:{ref:$model.selectData.ref(&quot;custom&quot;),name:'$model/UI2/system/components/justep/input/input'}" __cid="c2uuArm"/>  
+    <input component="$model/UI2/system/components/justep/input/input" class="form-control c2uuArm" xid="inputB" style="width:137px;" data-bind="component:{ref:$model.selectData.ref(&quot;beginDate&quot;),name:'$model/UI2/system/components/justep/input/input'}" __cid="c2uuArm"/>  
+    <input component="$model/UI2/system/components/justep/input/input" class="form-control c2uuArm" xid="inputE" style="width:136px;" data-bind="component:{ref:$model.selectData.ref(&quot;endDate&quot;),name:'$model/UI2/system/components/justep/input/input'}" __cid="c2uuArm"/>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link c2uuArm" xid="button4" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button4Click" data-config="{&quot;label&quot;:&quot;确定&quot;}" __cid="c2uuArm"> 
+      <i xid="i4" __cid="c2uuArm" class="c2uuArm"/>  
+      <span xid="span4" __cid="c2uuArm" class="c2uuArm">确定</span> 
+    </a> 
+  </div>  
+  <span component="$model/UI2/system/components/justep/windowDialog/windowDialog" xid="windowDialog1" data-bind="component:{name:'$model/UI2/system/components/justep/windowDialog/windowDialog'}" data-config="{&quot;src&quot;:&quot;$model/UI2/custom/crm/process/byorderselect/secondActivity.w&quot;,&quot;status&quot;:&quot;normal&quot;}" __cid="c2uuArm" class="c2uuArm">
+    <result concept="selectData" operation="modify" origin="dialogData" xid="default3" __cid="c2uuArm" class="c2uuArm"> 
+      <mapping from="fKHMC" to="custom" xid="default4" __cid="c2uuArm" class="c2uuArm"/>
+    </result>
+    <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog-overlay c2uuArm" __cid="c2uuArm"/>
+    <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog c2uuArm" style="display:none;" __cid="c2uuArm">
+      <xhtml:div class="x-dialog-title c2uuArm" __cid="c2uuArm">
+        <xhtml:button class="close c2uuArm" __cid="c2uuArm">
+          <xhtml:span __cid="c2uuArm" class="c2uuArm">×</xhtml:span>
+        </xhtml:button>
+        <xhtml:div class="x-dialog-title-text c2uuArm" __cid="c2uuArm"/>
+      </xhtml:div>
+      <xhtml:div class="x-dialog-body c2uuArm" __cid="c2uuArm"/>
+    </xhtml:div>
+  </span>
+  <div component="$model/UI2/system/components/justep/report/report" src="$model/UI2/custom/crm/process/fhorderselect/byorder_xls.xml" reportName="report" dataList="" class="x-report x-scroll-h c2uuArm" xid="report1" style="width:137%;" data-bind="component:{name:'$model/UI2/system/components/justep/report/report'}" data-config="{&quot;autoLoad&quot;:true}" __cid="c2uuArm">
+    <xhtml:span xmlns:xhtml="http://www.w3.org/1999/xhtml" style="display:none" xblid="attribute" paperType="A4" pageWidth="210mm" pageHeight="297mm" orientation="" marginTop="2.4mm" marginBottom="2.4mm" marginLeft="3.7mm" marginRight="3.7mm" marginHeader="" marginFootter="" dataList="p1" cacheFile="%2FUI2%2Fcustom%2Fcrm%2Fprocess%2Ffhorderselect%2F.cache%2FmainActivity.report" __cid="c2uuArm" class="c2uuArm"/>
+    <div xid="report_report1_content" report-name="report" __cid="c2uuArm" class="c2uuArm"/>
+  </div> 
+</div>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window ciQf2ym" component="$model/UI2/system/components/justep/window/window" design="device:pc" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="ciQf2ym" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/reportData/reportData,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/justep/report/report,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/toolBar/toolBar,">  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="ciQf2ym" class="ciQf2ym"></div>  
+  <div component="$model/UI2/system/components/justep/toolBar/toolBar" class="x-toolbar form-inline x-toolbar-spliter ciQf2ym" xid="toolBar1" data-bind="component:{name:'$model/UI2/system/components/justep/toolBar/toolBar'}" __cid="ciQf2ym"> 
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left ciQf2ym" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.pageSetup'}" __cid="ciQf2ym"> 
+      <i xid="i1" __cid="ciQf2ym" class="ciQf2ym"/>  
+      <span xid="span1" __cid="ciQf2ym" class="ciQf2ym"/> 
+    </a>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left ciQf2ym" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.preview'}" __cid="ciQf2ym"> 
+      <i xid="i2" __cid="ciQf2ym" class="ciQf2ym"/>  
+      <span xid="span2" __cid="ciQf2ym" class="ciQf2ym"/> 
+    </a>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left ciQf2ym" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.print'}" __cid="ciQf2ym"> 
+      <i xid="i3" __cid="ciQf2ym" class="ciQf2ym"/>  
+      <span xid="span3" __cid="ciQf2ym" class="ciQf2ym"/> 
+    </a>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left ciQf2ym" xid="button5" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.exportWord'}" __cid="ciQf2ym"> 
+      <i xid="i5" __cid="ciQf2ym" class="ciQf2ym"/>  
+      <span xid="span5" __cid="ciQf2ym" class="ciQf2ym"/> 
+    </a>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left ciQf2ym" xid="button6" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.exportExcel'}" __cid="ciQf2ym"> 
+      <i xid="i6" __cid="ciQf2ym" class="ciQf2ym"/>  
+      <span xid="span6" __cid="ciQf2ym" class="ciQf2ym"/> 
+    </a>  
+    <input component="$model/UI2/system/components/justep/input/input" class="form-control ciQf2ym" xid="input1" data-bind="component:{ref:$model.selectData.ref(&quot;date&quot;),name:'$model/UI2/system/components/justep/input/input'}" __cid="ciQf2ym"/>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link ciQf2ym" xid="button4" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button4Click" data-config="{&quot;label&quot;:&quot;确定&quot;}" __cid="ciQf2ym"> 
+      <i xid="i4" __cid="ciQf2ym" class="ciQf2ym"/>  
+      <span xid="span4" __cid="ciQf2ym" class="ciQf2ym">确定</span> 
+    </a> 
+  </div>  
+  <div component="$model/UI2/system/components/justep/report/report" src="$model/UI2/custom/crm/process/orderreport/fhorder_xls.xml" reportName="report" dataList="" class="x-report x-scroll-h ciQf2ym" xid="report1" data-bind="component:{name:'$model/UI2/system/components/justep/report/report'}" data-config="{&quot;autoLoad&quot;:true}" __cid="ciQf2ym">
+    <xhtml:span xmlns:xhtml="http://www.w3.org/1999/xhtml" style="display:none" xblid="attribute" paperType="A4" pageWidth="210mm" pageHeight="297mm" orientation="" marginTop="2.4mm" marginBottom="2.4mm" marginLeft="3.7mm" marginRight="3.7mm" marginHeader="" marginFootter="" dataList="p1" cacheFile="%2FUI2%2Fcustom%2Fcrm%2Fprocess%2Forderreport%2F.cache%2FmainActivity.report" __cid="ciQf2ym" class="ciQf2ym"/>
+    <div xid="report_report1_content" report-name="report" __cid="ciQf2ym" class="ciQf2ym"/>
+  </div> 
+</div>

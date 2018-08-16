@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xbl="http://www.w3.org/ns/xbl" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xblcompliexblns="http://www.w3.org/ns/xbl" __id="id_1" component="$model/UI2/system/components/justep/window/window" extends="$UI/portal/base/base.w" sysParam="false" xid="window" class="window window cFNvY7v" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cFNvY7v" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/contents/contents,$model/UI2/system/components/justep/window/window,">
+  <xhtml:style>.x-functree-icon.cFNvY7v{width: 20px} .x-closeFuncBtn.cFNvY7v{font-size: 20px} .x-datetime-icon.cFNvY7v, .x-tabs-icon.cFNvY7v{margin-right: 4px} .main-sidebar.cFNvY7v li.psm.cFNvY7v &gt; a.cFNvY7v &gt; .psm.cFNvY7v:before{font-size: 16px} .closeAll.cFNvY7v{margin-left: 8px}</xhtml:style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onunLoad:modelUnLoad;onModelConstruct:modelModelConstruct;onLoad:modelLoad" __cid="cFNvY7v" class="cFNvY7v"/>  
+  <div class="wrapper cFNvY7v" style="display:none;" xmlns:xui="http://www.justep.com/xui" xui:parent="window" xui:update-mode="insert" __cid="cFNvY7v"> 
+    <header class="main-header cFNvY7v" __cid="cFNvY7v"> 
+      <a class="logo cFNvY7v" __cid="cFNvY7v"> 
+        <span class="logo-mini cFNvY7v" __cid="cFNvY7v"> 
+          <b __cid="cFNvY7v" class="cFNvY7v"/> 
+        </span>  
+        <span class="logo-lg cFNvY7v" __cid="cFNvY7v"> 
+          <b __cid="cFNvY7v" class="cFNvY7v"/> 
+        </span> 
+      </a>  
+      <nav class="navbar navbar-static-top cFNvY7v" __cid="cFNvY7v"> 
+        <a href="#" class="sidebar-toggle cFNvY7v" data-toggle="offcanvas" role="button" __cid="cFNvY7v"> 
+          <span class="sr-only cFNvY7v" __cid="cFNvY7v">Toggle navigation</span> 
+        </a>  
+        <div __cid="cFNvY7v" class="cFNvY7v"> 
+          <h3 style="float:left; color:white; margin-top:13px;" __cid="cFNvY7v" class="cFNvY7v">济南合成塑料订单及客户管理系统</h3> 
+        </div>  
+        <div class="navbar-custom-menu cFNvY7v" __cid="cFNvY7v"> 
+          <ul class="nav navbar-nav cFNvY7v" __cid="cFNvY7v"> 
+            <li class="dropdown cFNvY7v" __cid="cFNvY7v"> 
+              <a class="dropdown-toggle cFNvY7v" title="系统时间" __cid="cFNvY7v"> 
+                <i class="fa fa-clock-o x-datetime-icon cFNvY7v" __cid="cFNvY7v"/>  
+                <span class="hidden-xs x-portal-datetime cFNvY7v" __cid="cFNvY7v"/> 
+              </a> 
+            </li>  
+            <li class="dropdown tasks-menu cFNvY7v" __cid="cFNvY7v"> 
+              <a href="#" class="dropdown-toggle x-portal-task-wait cFNvY7v" title="待办任务" __cid="cFNvY7v"> 
+                <i class="fa fa-flag-o cFNvY7v" __cid="cFNvY7v"/>  
+                <span class="label label-danger cFNvY7v" bind-text="waitTaskCount" __cid="cFNvY7v">0</span> 
+              </a> 
+            </li>  
+            <li class="dropdown x-portal-agent cFNvY7v" __cid="cFNvY7v"> 
+              <a href="#" class="dropdown-toggle cFNvY7v" data-toggle="dropdown" data-x5-hover="dropdown" data-close-others="true" __cid="cFNvY7v"> 
+                <i class="icon-ios7-browsers cFNvY7v" __cid="cFNvY7v"/>  
+                <span class="username username-hide-on-mobile cFNvY7v" __cid="cFNvY7v">代理</span>  
+                <span class="caret cFNvY7v" __cid="cFNvY7v"/> 
+              </a>  
+              <ul class="dropdown-menu dropdown-menu-default cFNvY7v" __cid="cFNvY7v"/> 
+            </li>  
+            <li class="dropdown user user-menu cFNvY7v" __cid="cFNvY7v"> 
+              <a href="#" class="dropdown-toggle cFNvY7v" data-toggle="dropdown" __cid="cFNvY7v"> 
+                <img class="user-image x-person-avatar cFNvY7v" __cid="cFNvY7v"/>  
+                <span class="hidden-xs x-portal-username cFNvY7v" __cid="cFNvY7v"/> 
+              </a>  
+              <ul class="dropdown-menu cFNvY7v" __cid="cFNvY7v"> 
+                <li class="user-header cFNvY7v" __cid="cFNvY7v"> 
+                  <img class="img-circle x-person-avatar cFNvY7v" __cid="cFNvY7v"/>  
+                  <p class="x-person-info cFNvY7v" __cid="cFNvY7v"/> 
+                </li>  
+                <li class="user-footer cFNvY7v" __cid="cFNvY7v"> 
+                  <div class="pull-left cFNvY7v" __cid="cFNvY7v"> 
+                    <a class="btn btn-default btn-flat x-portal-setPassWord cFNvY7v" __cid="cFNvY7v">修改密码</a> 
+                  </div>  
+                  <div class="pull-right cFNvY7v" __cid="cFNvY7v"> 
+                    <a class="btn btn-default btn-flat x-portal-logout cFNvY7v" __cid="cFNvY7v">注销</a> 
+                  </div> 
+                </li> 
+              </ul> 
+            </li>  
+            <li class="dropdown dropdown-user cFNvY7v" __cid="cFNvY7v"> 
+              <a id="portal-reload" class="dropdown-toggle x-portal-reload cFNvY7v" style="display:none;" __cid="cFNvY7v"> 
+                <i class="icon-refresh cFNvY7v" __cid="cFNvY7v"/>  
+                <span class="username username-hide-on-mobile cFNvY7v" __cid="cFNvY7v">刷新</span> 
+              </a> 
+            </li>  
+            <li __cid="cFNvY7v" class="cFNvY7v"> 
+              <a href="#" data-toggle="control-sidebar" title="设置" __cid="cFNvY7v" class="cFNvY7v"> 
+                <i class="fa fa-gears cFNvY7v" __cid="cFNvY7v"/> 
+              </a> 
+            </li> 
+          </ul> 
+        </div> 
+      </nav> 
+    </header>  
+    <aside class="main-sidebar cFNvY7v" __cid="cFNvY7v"> 
+      <section class="sidebar cFNvY7v" __cid="cFNvY7v"> 
+        <div class="user-panel cFNvY7v" __cid="cFNvY7v"> 
+          <div class="pull-left image cFNvY7v" __cid="cFNvY7v"> 
+            <img class="img-circle x-person-avatar cFNvY7v" __cid="cFNvY7v"/> 
+          </div>  
+          <div class="pull-left info cFNvY7v" __cid="cFNvY7v"> 
+            <p class="x-portal-username cFNvY7v" __cid="cFNvY7v"/>  
+            <a __cid="cFNvY7v" class="cFNvY7v"> 
+              <i class="fa fa-circle text-success cFNvY7v" __cid="cFNvY7v"/>  
+              <span class="x-login-datetime cFNvY7v" __cid="cFNvY7v"/> 
+            </a> 
+          </div> 
+        </div>  
+        <ul class="sidebar-menu cFNvY7v" __cid="cFNvY7v"> 
+          <li class="active cFNvY7v" __cid="cFNvY7v"> 
+            <a class="x-portal-showMain cFNvY7v" __cid="cFNvY7v"> 
+              <i class="x-functree-icon icon-home cFNvY7v" __cid="cFNvY7v"/>  
+              <span class="title cFNvY7v" __cid="cFNvY7v">主页</span> 
+            </a> 
+          </li> 
+        </ul> 
+      </section> 
+    </aside>  
+    <div class="content-wrapper cFNvY7v" __cid="cFNvY7v"> 
+      <section class="content-header cFNvY7v" __cid="cFNvY7v"> 
+        <h1 __cid="cFNvY7v" class="cFNvY7v">首页</h1>  
+        <ol class="breadcrumb cFNvY7v" __cid="cFNvY7v"> 
+          <li __cid="cFNvY7v" class="cFNvY7v"> 
+            <a component="$model/UI2/system/components/justep/button/button" xid="closeFuncBtn" class="x-closeFuncBtn cFNvY7v" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:closeFuncBtnClick" __cid="cFNvY7v"> 
+              <i class="icon-close-round cFNvY7v" __cid="cFNvY7v"/> 
+            </a> 
+          </li> 
+        </ol> 
+      </section>  
+      <section class="content cFNvY7v" __cid="cFNvY7v"> 
+        <div class="x-contents x-portal-pages cFNvY7v" component="$model/UI2/system/components/justep/contents/contents" xid="contents" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-config="{&quot;active&quot;:0}" __cid="cFNvY7v"/> 
+      </section> 
+    </div>  
+    <footer class="main-footer cFNvY7v" __cid="cFNvY7v"> 
+      <strong __cid="cFNvY7v" class="cFNvY7v">Copyright 2016 
+        <a href="http://xkaifa.com" target="_blank" __cid="cFNvY7v" class="cFNvY7v">TEL:15553101899</a>.
+      </strong> All rights reserved.
+    </footer>  
+    <aside class="control-sidebar control-sidebar-dark cFNvY7v" __cid="cFNvY7v"> 
+      <ul class="nav nav-tabs nav-justified control-sidebar-tabs cFNvY7v" __cid="cFNvY7v"> 
+        <li class="active cFNvY7v" __cid="cFNvY7v"> 
+          <a href="#control-sidebar-func-tab" data-toggle="tab" __cid="cFNvY7v" class="cFNvY7v"> 
+            <i class="x-tabs-icon fa fa-clone cFNvY7v" __cid="cFNvY7v"/>已开功能
+          </a> 
+        </li> 
+      </ul>  
+      <div class="tab-content cFNvY7v" __cid="cFNvY7v"> 
+        <div class="tab-pane functionOpened active cFNvY7v" id="control-sidebar-func-tab" __cid="cFNvY7v"> 
+          <h3 class="control-sidebar-heading cFNvY7v" __cid="cFNvY7v">已打开
+            <span class="functionOpenedCount cFNvY7v" __cid="cFNvY7v">0</span>个功能
+            <a href="#" class="closeAll cFNvY7v" __cid="cFNvY7v">全部关闭</a> 
+          </h3>  
+          <ul class="control-sidebar-menu functionOpenedList cFNvY7v" __cid="cFNvY7v"/> 
+        </div> 
+      </div> 
+    </aside>  
+    <div class="control-sidebar-bg cFNvY7v" __cid="cFNvY7v"/> 
+  </div>
+</div>

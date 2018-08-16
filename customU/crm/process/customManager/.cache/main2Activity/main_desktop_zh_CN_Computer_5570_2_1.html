@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:100%" class="no-js">  
+  <head xmlns=""> 
+    <meta charset="utf-8"/>  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>  
+    <meta name="apple-mobile-web-app-capable" content="yes"/>  
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>  
+    <meta name="format-detection" content="telephone=no"/>  
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>  
+    <script src="../../../../../v_5570_nol_zh_CNs_desktopd_pc/system/lib/base/modernizr-2.8.3.min.js"/>  
+    <script id="__varReplace">
+    	
+    	    	window.__justep = window.__justep || {};
+				window.__justep.isDebug = false;
+				window.__justep.__packageMode = "1";
+				window.__justep.__isPackage = false;;
+				window.__justep.url = location.href;
+				window.__justep.versionInfo = {};
+		 
+    	</script>  
+    <script id="__updateVersion">
+        
+				(function(url, mode){
+					if (("@"+"mode@") === mode) mode = "3";
+					if (("@"+"versionUrl@") === url) url = "system/service/common/app.j";
+					if ((mode!=="1" &amp;&amp; (mode!="2") &amp;&amp; (mode!="3"))) return;
+					var async = (mode=="1");
+					var x5Version = "noApp";
+					var x5AppAgents = /x5app\/([0-9.]*)/.exec(navigator.userAgent);
+					if(x5AppAgents &amp;&amp; x5AppAgents.length &gt; 1){
+					   	x5Version = x5AppAgents[1] || "";
+					} 
+					function createXhr(){
+						try {	
+							return new XMLHttpRequest();
+						}catch (tryMS) {	
+							var version = ["MSXML2.XMLHttp.6.0",
+							               "MSXML2.XMLHttp.3.0",
+							               "MSXML2.XMLHttp",
+							               "Miscrosoft.XMLHTTP"];
+							for(var i = 0; i &lt; version.length; i++){
+								try{
+							    	return new ActiveXObject(version[i]);
+								}catch(e){}
+							}
+						}
+						throw new Error("您的系统或浏览器不支持XHR对象！");
+					}
+					
+					function createGuid(){	
+						var guid = '';	
+						for (var i = 1; i &lt;= 32; i++){		
+							var n = Math.floor(Math.random()*16.0).toString(16);		
+							guid += n;		
+							if((i==8)||(i==12)||(i==16)||(i==20))			
+								guid += '-';	
+						}	
+						return guid;
+					}
+					
+					function parseUrl(href){
+						href = href.split("#")[0];
+						var items = href.split("?");
+						href = items[0];
+						var query = items[1] || "";
+						items = href.split("/");
+						var baseItems = [];
+						var pathItems = [];
+						var isPath = false;
+						for (var i=0; i&lt;items.length; i++){
+							if (mode == "3"){
+								if (items[i] &amp;&amp; (items[i].indexOf("v_") === 0) 
+										&amp;&amp; (items[i].indexOf("l_") !== -1)
+										&amp;&amp; (items[i].indexOf("s_") !== -1)
+										&amp;&amp; (items[i].indexOf("d_") !== -1)
+										|| (items[i]=="v_")){
+									isPath = true;
+									continue;
+								}
+							}else{
+								if (items[i] &amp;&amp; (items[i].indexOf("v-")===0) &amp;&amp; (items[i].charAt(items[i].length-1)=="-") ){
+									isPath = true;
+									continue;
+								}
+							}
+							if (isPath){
+								pathItems.push(items[i]);
+							}else{
+								baseItems.push(items[i]);	
+							}
+							
+						}
+						var base = baseItems.join("/");
+						if (base.charAt(base.length-1)!=="/") base += "/";
+						
+						var path = pathItems.join("/");
+						if (path.charAt(0) !== "/") path = "/" + path;
+						return [base, path, query];
+					}
+					
+					
+					var items = parseUrl(window.location.href);
+					var base = items[0];
+					var path = items[1];
+					var query = items[2];
+					var xhr = createXhr();
+					url += ((url.indexOf("?")!=-1) ? "&amp;" : "?") +"_=" + createGuid();
+					if (mode === "3"){
+						url += "&amp;url=" + path;
+						if (query)
+							url += "&amp;" + query;
+					}
+					xhr.open('GET', base + url, async);
+					
+					if (async){
+						xhr.onreadystatechange=function(){
+							if((xhr.readyState == 4) &amp;&amp; (xhr.status == 200) &amp;&amp; xhr.responseText){
+								var versionInfo = JSON.parse(xhr.responseText);
+								window.__justep.versionInfo = versionInfo;
+								window.__justep.versionInfo.baseUrl = base;
+								if (query){
+									path = path + "?" + query;
+								}
+								path = versionInfo.resourceInfo.indexURL || path; /* 如果返回indexPath则使用indexPath，否则使用当前的path */
+								var indexUrl = versionInfo.baseUrl + versionInfo.resourceInfo.version + path;
+								versionInfo.resourceInfo.indexPageURL = indexUrl;
+								if(versionInfo.resourceInfo.resourceUpdateMode != "md5"){
+									if (window.__justep.url.indexOf(versionInfo.resourceInfo.version) == -1){
+										versionInfo.resourceInfo.isNewVersion = true;
+									};
+								}
+							}
+						}
+					}
+					
+					try{
+						xhr.send(null);
+						if (!async &amp;&amp; (xhr.status == 200) &amp;&amp; xhr.responseText){
+							var versionInfo = JSON.parse(xhr.responseText);
+							window.__justep.versionInfo = versionInfo;
+							window.__justep.versionInfo.baseUrl = base;
+							if ((mode==="3") &amp;&amp; window.__justep.isDebug){
+								/* 模式3且是调试模式不重定向 */
+							}else{
+								if (query){
+									path = path + "?" + query;
+								}
+								if(versionInfo.resourceInfo.resourceUpdateMode == "md5"){
+									path = versionInfo.resourceInfo.indexURL || path; /* 如果返回indexPath则使用indexPath，否则使用当前的path */
+									var indexUrl = versionInfo.baseUrl + versionInfo.resourceInfo.version + path;
+									versionInfo.resourceInfo.indexPageURL = indexUrl; 
+								}else if (versionInfo.resourceInfo &amp;&amp; versionInfo.resourceInfo.version &amp;&amp; (window.__justep.url.indexOf(versionInfo.resourceInfo.version) == -1)){
+									path = versionInfo.resourceInfo.indexURL || path; /* 如果返回indexPath则使用indexPath，否则使用当前的path */
+									var indexUrl = versionInfo.baseUrl + versionInfo.resourceInfo.version + path;
+									window.location.href = indexUrl;
+								}
+							}
+						}
+					}catch(e2){}
+				}("@versionUrl@", "@mode@"));
+                 
+        </script>  
+    <link rel="stylesheet" href="../../../../../v_5570_nol_zh_CNs_desktopd_pc/system/components/bootstrap.min.css" include="$model/UI2/system/components/bootstrap/lib/css/bootstrap,$model/UI2/system/components/bootstrap/lib/css/bootstrap-theme"/>
+    <link rel="stylesheet" href="../../../../../v_5570_nol_zh_CNs_desktopd_pc/system/components/comp.min.css" include="$model/UI2/system/components/justep/lib/css2/dataControl,$model/UI2/system/components/justep/input/css/datePickerPC,$model/UI2/system/components/justep/messageDialog/css/messageDialog,$model/UI2/system/components/justep/lib/css3/round,$model/UI2/system/components/justep/input/css/datePicker,$model/UI2/system/components/justep/row/css/row,$model/UI2/system/components/justep/attachment/css/attachment,$model/UI2/system/components/justep/barcode/css/barcodeImage,$model/UI2/system/components/bootstrap/dropdown/css/dropdown,$model/UI2/system/components/justep/dataTables/css/dataTables,$model/UI2/system/components/justep/contents/css/contents,$model/UI2/system/components/justep/common/css/forms,$model/UI2/system/components/justep/locker/css/locker,$model/UI2/system/components/justep/menu/css/menu,$model/UI2/system/components/justep/scrollView/css/scrollView,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/dialog/css/dialog,$model/UI2/system/components/justep/bar/css/bar,$model/UI2/system/components/justep/popMenu/css/popMenu,$model/UI2/system/components/justep/lib/css/icons,$model/UI2/system/components/justep/lib/css4/e-commerce,$model/UI2/system/components/justep/toolBar/css/toolBar,$model/UI2/system/components/justep/popOver/css/popOver,$model/UI2/system/components/justep/panel/css/panel,$model/UI2/system/components/bootstrap/carousel/css/carousel,$model/UI2/system/components/justep/wing/css/wing,$model/UI2/system/components/bootstrap/scrollSpy/css/scrollSpy,$model/UI2/system/components/justep/titleBar/css/titleBar,$model/UI2/system/components/justep/lib/css1/linear,$model/UI2/system/components/justep/numberSelect/css/numberList,$model/UI2/system/components/justep/list/css/list,$model/UI2/system/components/justep/dataTables/css/dataTables"/>
+  </head>  
+  <body xmlns="" style="width:100%;height:100%;margin: 0;"> 
+    <script intro="none"/>  
+    <div id="applicationHost" class="applicationHost" style="width:100%;height:100%;" __component-context__="block">
+      <div xid="window" class="window cVV3EB3" component="$model/UI2/system/components/justep/window/window" design="device:pc" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cVV3EB3" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/bootstrap/form/form,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/bootstrap/row/row,$model/UI2/system/components/justep/windowDialog/windowDialog,$model/UI2/system/components/justep/data/bizData,$model/UI2/system/components/justep/toolBar/toolBar,$model/UI2/system/components/justep/button/checkbox,$model/UI2/system/components/justep/grid/grid,$model/UI2/system/components/justep/gridSelect/gridSelect,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,">  
+        <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="cVV3EB3" class="cVV3EB3"/>  
+        <span component="$model/UI2/system/components/justep/windowDialog/windowDialog" xid="windowDialog1" data-bind="component:{name:'$model/UI2/system/components/justep/windowDialog/windowDialog'}" data-config="{&quot;src&quot;:&quot;$model/UI2/custom/crm/process/custom/secondActivity.w&quot;,&quot;status&quot;:&quot;normal&quot;}" __cid="cVV3EB3" class="cVV3EB3"> 
+          <result concept="treeData" operation="modify" origin="dialogData" xid="default3" __cid="cVV3EB3" class="cVV3EB3"> 
+            <mapping from="CU_KHXX" to="fPARENT" xid="default10" __cid="cVV3EB3" class="cVV3EB3"/> 
+          </result>  
+          <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog-overlay cVV3EB3" __cid="cVV3EB3"></div>  
+          <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog cVV3EB3" style="display:none;" __cid="cVV3EB3">  
+            <div class="x-dialog-title cVV3EB3" __cid="cVV3EB3"> 
+              <button class="close cVV3EB3" __cid="cVV3EB3"> 
+                <span __cid="cVV3EB3" class="cVV3EB3">×</span> 
+              </button>  
+              <div class="x-dialog-title-text cVV3EB3" __cid="cVV3EB3"/> 
+            </div>  
+            <div class="x-dialog-body cVV3EB3" __cid="cVV3EB3"/> 
+          </div> 
+        </span>  
+        <div class="container-fluid cVV3EB3" xid="view" __cid="cVV3EB3"> 
+          <div component="$model/UI2/system/components/justep/toolBar/toolBar" class="x-toolbar form-inline x-toolbar-spliter cVV3EB3" xid="toolBar1" data-bind="component:{name:'$model/UI2/system/components/justep/toolBar/toolBar'}" __cid="cVV3EB3"> 
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cVV3EB3" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'treeData.new'}" __cid="cVV3EB3"> 
+              <i xid="i3" __cid="cVV3EB3" class="cVV3EB3"/>  
+              <span xid="span3" __cid="cVV3EB3" class="cVV3EB3"/> 
+            </a>  
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cVV3EB3" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'treeData.save'}" __cid="cVV3EB3"> 
+              <i xid="i1" __cid="cVV3EB3" class="cVV3EB3"/>  
+              <span xid="span1" __cid="cVV3EB3" class="cVV3EB3"/> 
+            </a>  
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cVV3EB3" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'treeData.delete'}" __cid="cVV3EB3"> 
+              <i xid="i2" __cid="cVV3EB3" class="cVV3EB3"/>  
+              <span xid="span2" __cid="cVV3EB3" class="cVV3EB3"/> 
+            </a>  
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cVV3EB3" xid="button4" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'treeData.newChild'}" __cid="cVV3EB3"> 
+              <i xid="i4" __cid="cVV3EB3" class="cVV3EB3"/>  
+              <span xid="span4" __cid="cVV3EB3" class="cVV3EB3"/> 
+            </a>  
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cVV3EB3" xid="button5" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'treeData.newBrother'}" __cid="cVV3EB3"> 
+              <i xid="i5" __cid="cVV3EB3" class="cVV3EB3"/>  
+              <span xid="span5" __cid="cVV3EB3" class="cVV3EB3"/> 
+            </a>  
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cVV3EB3" xid="moveBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:moveBtnClick" data-config="{&quot;icon&quot;:&quot;linear linear-linespacing&quot;,&quot;label&quot;:&quot;移动&quot;}" __cid="cVV3EB3"> 
+              <i xid="i6" class="linear linear-linespacing cVV3EB3" __cid="cVV3EB3"/>  
+              <span xid="span6" __cid="cVV3EB3" class="cVV3EB3">移动</span> 
+            </a>  
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cVV3EB3" xid="firstBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:firstBtnClick" data-config="{&quot;icon&quot;:&quot;linear linear-location&quot;,&quot;label&quot;:&quot;一级&quot;}" __cid="cVV3EB3"> 
+              <i xid="i8" class="linear linear-location cVV3EB3" __cid="cVV3EB3"/>  
+              <span xid="span8" __cid="cVV3EB3" class="cVV3EB3">一级</span> 
+            </a>  
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left cVV3EB3" xid="button7" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'treeData.refresh'}" __cid="cVV3EB3"> 
+              <i xid="i7" __cid="cVV3EB3" class="cVV3EB3"/>  
+              <span xid="span7" __cid="cVV3EB3" class="cVV3EB3"/> 
+            </a>  
+            <span component="$model/UI2/system/components/justep/button/checkbox" class="x-checkbox cVV3EB3" xid="checkbox1" label="编辑" checkedValue="是" uncheckedValue="否" checked="false" data-config="{&quot;checked&quot;:false,&quot;checkedValue&quot;:&quot;是&quot;,&quot;disabled&quot;:false,&quot;label&quot;:&quot;编辑&quot;,&quot;uncheckedValue&quot;:&quot;否&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/checkbox'}" data-events="onChange:checkbox1Change" __cid="cVV3EB3"> 
+              <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="checkbox" __cid="cVV3EB3" class="cVV3EB3"></input>  
+              <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cVV3EB3" class="cVV3EB3">编辑</label> 
+            </span>  
+            <input xid="seekInput" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" style="width:139px;" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;format&quot;:&quot;0,000&quot;,&quot;valueUpdateMode&quot;:&quot;input&quot;}" __cid="cVV3EB3"/> 
+          </div>  
+          <div component="$model/UI2/system/components/bootstrap/row/row" class="row cVV3EB3" xid="row1" data-bind="component:{name:'$model/UI2/system/components/bootstrap/row/row'}" __cid="cVV3EB3"> 
+            <div class="col col-xs-3 cVV3EB3" xid="col1" style="overflow: auto;" __cid="cVV3EB3"> 
+              <table xmlns:xhtml="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/grid/grid" hiddenCaptionbar="true" altRows="true" class="x-grid-no-bordered cVV3EB3" xid="grid2" data="treeData" directEdit="false" appearance="tree" expandColumn="fKHMC" virtualRootLabel="客户信息" useVirtualRoot="true" data-config="{&quot;altRows&quot;:true,&quot;appearance&quot;:&quot;tree&quot;,&quot;colModel&quot;:[{&quot;name&quot;:&quot;fKHMC&quot;,&quot;xid&quot;:&quot;column1&quot;}],&quot;data&quot;:&quot;treeData&quot;,&quot;directEdit&quot;:false,&quot;expandColumn&quot;:&quot;fKHMC&quot;,&quot;height&quot;:&quot;auto&quot;,&quot;hiddenCaptionbar&quot;:true,&quot;useVirtualRoot&quot;:true,&quot;virtualRootLabel&quot;:&quot;客户信息&quot;,&quot;width&quot;:&quot;100%&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/grid/grid'}" __cid="cVV3EB3"></table> 
+            </div>  
+            <div class="col col-xs-9 col-spliter-left cVV3EB3" xid="col2" __cid="cVV3EB3"> 
+              <div xid="mainForm" class="form-horizontal cVV3EB3" component="$model/UI2/system/components/bootstrap/form/form" style="margin:30px 10px" data-bind="component:{name:'$model/UI2/system/components/bootstrap/form/form'}" __cid="cVV3EB3"> 
+                <div xid="formGroup1" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col11" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="versionL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('version')"/> 
+                  </div>  
+                  <div xid="col12" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="version" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('version'),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;readonly&quot;:true}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div>  
+                <div xid="formGroup2" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col21" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fKHBML" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fKHBM')"/> 
+                  </div>  
+                  <div xid="col22" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="fKHBM" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fKHBM'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div>  
+                <div xid="formGroup3" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col31" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fKHMCL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fKHMC')"/> 
+                  </div>  
+                  <div xid="col32" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="fKHMC" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fKHMC'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div>  
+                <div xid="formGroup4" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col41" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fKHLBL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fKHLB')"/> 
+                  </div>  
+                  <div xid="col42" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <div class="x-gridSelect cVV3EB3" component="$model/UI2/system/components/justep/gridSelect/gridSelect" xid="typeGridSelect" data-config="{&quot;autoOptionWidth&quot;:false,&quot;disabled&quot;:false,&quot;inputChangeable&quot;:false,&quot;inputFilterable&quot;:false,&quot;optionCfg&quot;:{&quot;colModel&quot;:[{&quot;name&quot;:&quot;fFLMC&quot;}],&quot;data&quot;:&quot;typeData&quot;,&quot;label&quot;:&quot;fFLMC&quot;,&quot;value&quot;:&quot;fFLMC&quot;,&quot;xid&quot;:&quot;option4&quot;},&quot;optionHeight&quot;:300}" data-bind="component:{ref:$model.treeData.ref(&quot;fKHLB&quot;),name:'$model/UI2/system/components/justep/gridSelect/gridSelect'}" __cid="cVV3EB3"> 
+                      <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-option cVV3EB3" __cid="cVV3EB3"></div>  
+                      <input xmlns:xhtml="http://www.w3.org/1999/xhtml" class="form-control x-gridSelect-input cVV3EB3" __cid="cVV3EB3"></input>  
+                      <span xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-clear icon-close-circled hide cVV3EB3" __cid="cVV3EB3"></span> 
+                    </div> 
+                  </div> 
+                </div>  
+                <div xid="formGroup5" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col51" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fLXRL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fLXR')"/> 
+                  </div>  
+                  <div xid="col52" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="fLXR" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fLXR'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div>  
+                <div xid="formGroup6" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col61" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fLXDHL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fLXDH')"/> 
+                  </div>  
+                  <div xid="col62" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="fLXDH" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fLXDH'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div>  
+                <div xid="formGroup7" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col71" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fYDDHL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fYDDH')"/> 
+                  </div>  
+                  <div xid="col72" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="fYDDH" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fYDDH'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div>  
+                <div xid="formGroup8" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col81" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fLXQQL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fLXQQ')"/> 
+                  </div>  
+                  <div xid="col82" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="fLXQQ" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fLXQQ'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div>  
+                <div xid="formGroup9" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col91" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fLXWXL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fLXWX')"/> 
+                  </div>  
+                  <div xid="col92" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="fLXWX" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fLXWX'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div>  
+                <div xid="formGroup10" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col101" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fSHDZL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fSHDZ')"/> 
+                  </div>  
+                  <div xid="col102" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="fSHDZ" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fSHDZ'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div>  
+                <div xid="formGroup11" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col111" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fBZL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fBZ')"/> 
+                  </div>  
+                  <div xid="col112" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="fBZ" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fBZ'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div>  
+                <div xid="formGroup24" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col41" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fJSFSL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fJSFS')"/> 
+                  </div>  
+                  <div xid="col42" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <div class="x-gridSelect cVV3EB3" component="$model/UI2/system/components/justep/gridSelect/gridSelect" xid="gridSelect2" data-config="{&quot;autoOptionWidth&quot;:false,&quot;disabled&quot;:false,&quot;inputChangeable&quot;:false,&quot;inputFilterable&quot;:false,&quot;optionCfg&quot;:{&quot;colModel&quot;:[{&quot;name&quot;:&quot;type&quot;}],&quot;data&quot;:&quot;jsData&quot;,&quot;label&quot;:&quot;type&quot;,&quot;value&quot;:&quot;type&quot;,&quot;xid&quot;:&quot;option5&quot;},&quot;optionHeight&quot;:300}" data-bind="component:{ref:$model.treeData.ref(&quot;fJSFS&quot;),name:'$model/UI2/system/components/justep/gridSelect/gridSelect'}" __cid="cVV3EB3"> 
+                      <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-option cVV3EB3" __cid="cVV3EB3"></div>  
+                      <input xmlns:xhtml="http://www.w3.org/1999/xhtml" class="form-control x-gridSelect-input cVV3EB3" __cid="cVV3EB3"></input>  
+                      <span xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-clear icon-close-circled hide cVV3EB3" __cid="cVV3EB3"></span> 
+                    </div> 
+                  </div> 
+                </div>  
+                <div xid="formGroup12" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col121" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fGZRL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fGZR')"/> 
+                  </div>  
+                  <div xid="col122" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <div class="x-gridSelect cVV3EB3" component="$model/UI2/system/components/justep/gridSelect/gridSelect" xid="gridSelect1" inputFilterable="true" data-config="{&quot;autoOptionWidth&quot;:false,&quot;disabled&quot;:false,&quot;inputChangeable&quot;:false,&quot;inputFilterable&quot;:true,&quot;optionCfg&quot;:{&quot;colModel&quot;:[{&quot;name&quot;:&quot;sName&quot;}],&quot;data&quot;:&quot;personData&quot;,&quot;label&quot;:&quot;sName&quot;,&quot;value&quot;:&quot;sName&quot;,&quot;xid&quot;:&quot;option3&quot;},&quot;optionHeight&quot;:300}" data-bind="component:{ref:$model.treeData.ref(&quot;fGZR&quot;),name:'$model/UI2/system/components/justep/gridSelect/gridSelect'}" __cid="cVV3EB3"> 
+                      <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-option cVV3EB3" __cid="cVV3EB3"></div>  
+                      <input xmlns:xhtml="http://www.w3.org/1999/xhtml" class="form-control x-gridSelect-input cVV3EB3" __cid="cVV3EB3"></input>  
+                      <span xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-clear icon-close-circled hide cVV3EB3" __cid="cVV3EB3"></span> 
+                    </div> 
+                  </div> 
+                </div>  
+                <div xid="formGroup13" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col131" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fLXKHL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fLXKH')"/> 
+                  </div>  
+                  <div xid="col132" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <div class="x-gridSelect cVV3EB3" component="$model/UI2/system/components/justep/gridSelect/gridSelect" xid="lxGridSelect" data-config="{&quot;autoOptionWidth&quot;:false,&quot;disabled&quot;:false,&quot;inputChangeable&quot;:false,&quot;inputFilterable&quot;:false,&quot;optionCfg&quot;:{&quot;colModel&quot;:[{&quot;name&quot;:&quot;type&quot;}],&quot;data&quot;:&quot;lxData&quot;,&quot;label&quot;:&quot;type&quot;,&quot;value&quot;:&quot;type&quot;,&quot;xid&quot;:&quot;option1&quot;},&quot;optionHeight&quot;:300}" data-bind="component:{ref:$model.treeData.ref(&quot;fLXKH&quot;),name:'$model/UI2/system/components/justep/gridSelect/gridSelect'}" __cid="cVV3EB3"> 
+                      <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-option cVV3EB3" __cid="cVV3EB3"></div>  
+                      <input xmlns:xhtml="http://www.w3.org/1999/xhtml" class="form-control x-gridSelect-input cVV3EB3" __cid="cVV3EB3"></input>  
+                      <span xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-gridSelect-clear icon-close-circled hide cVV3EB3" __cid="cVV3EB3"></span> 
+                    </div> 
+                  </div> 
+                </div>  
+                <div xid="formGroup15" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col151" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fZDYYL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fZDYY')"/> 
+                  </div>  
+                  <div xid="col152" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="fZDYY" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fZDYY'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div>  
+                <div xid="formGroup16" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col161" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fZDYEL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fZDYE')"/> 
+                  </div>  
+                  <div xid="col162" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="fZDYE" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fZDYE'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div>  
+                <div xid="formGroup17" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col171" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fZDYSL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fZDYS')"/> 
+                  </div>  
+                  <div xid="col172" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="fZDYS" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fZDYS'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div>  
+                <div xid="formGroup18" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col181" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fZDYSIL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fZDYSI')"/> 
+                  </div>  
+                  <div xid="col182" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="fZDYSI" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fZDYSI'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div>  
+                <div xid="formGroup19" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col191" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fZDYWL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fZDYW')"/> 
+                  </div>  
+                  <div xid="col192" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="fZDYW" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fZDYW'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div>  
+                <div xid="formGroup20" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col201" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fZDYLL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fZDYL')"/> 
+                  </div>  
+                  <div xid="col202" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="fZDYL" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fZDYL'),name:'$model/UI2/system/components/justep/input/input'}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div>  
+                <div xid="formGroup21" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col211" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fWHSJL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fWHSJ')"/> 
+                  </div>  
+                  <div xid="col212" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="fWHSJ" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fWHSJ'),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;readonly&quot;:true}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div>  
+                <div xid="formGroup22" class="form-group cVV3EB3" __cid="cVV3EB3"> 
+                  <div xid="col221" class="col-sm-2 cVV3EB3" __cid="cVV3EB3"> 
+                    <label xid="fWHRL" class="control-label cVV3EB3" __cid="cVV3EB3" data-bind="text:treeData.label('fWHR')"/> 
+                  </div>  
+                  <div xid="col222" class="col-sm-10 cVV3EB3" __cid="cVV3EB3"> 
+                    <input xid="fWHR" class="form-control cVV3EB3" component="$model/UI2/system/components/justep/input/input" data-bind="component:{ref:treeData.ref('fWHR'),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;readonly&quot;:true}" __cid="cVV3EB3"/> 
+                  </div> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div>
+    </div>  
+    <div id="downloadGCF" style="display:none;padding:50px;"> 
+      <span>您使用的浏览器需要下载插件才能使用,</span>  
+      <a id="downloadGCFLink" href="#">下载地址</a>  
+      <p>(安装后请重新打开浏览器)</p> 
+    </div>  
+    <script>
+    	
+    	            //判断浏览器, 判断GCF
+    	 			var browser = {
+    			        isIe: function () {
+    			            return navigator.appVersion.indexOf("MSIE") != -1;
+    			        },
+    			        navigator: navigator.appVersion,
+    			        getVersion: function() {
+    			            var version = 999; // we assume a sane browser
+    			            if (navigator.appVersion.indexOf("MSIE") != -1)
+    			                // bah, IE again, lets downgrade version number
+    			                version = parseFloat(navigator.appVersion.split("MSIE")[1]);
+    			            return version;
+    			        }
+    			    };
+    				function isGCFInstalled(){
+    			      try{
+    			        var i = new ActiveXObject('ChromeTab.ChromeFrame');
+    			        if (i) {
+    			          return true;
+    			        }
+    			      }catch(e){}
+    			      return false;
+    				}
+    	            //判断浏览器, 判断GCF
+    	            var __continueRun = true;
+    				if (browser.isIe() &amp;&amp; (browser.getVersion() &lt; 10) &amp;&amp; !isGCFInstalled()) {
+    					document.getElementById("applicationHost").style.display = 'none';
+    					document.getElementById("downloadGCF").style.display = 'block';
+    					var downloadLink = "/" + location.pathname.match(/[^\/]+/)[0] + "/v8.msi";
+    					document.getElementById("downloadGCFLink").href = downloadLink; 
+    					__continueRun = false;
+    	            }
+		 	
+    	</script>  
+    <script id="_metaJS" src="../../../../../v_5570_nol_zh_CNs_desktopd_pc/system/config/meta.js"> </script>  
+    <script id="_requireJS" src="../../../../../v_5570_nol_zh_CNs_desktopd_pc/system/lib/require/require.2.1.10.js"> </script>  
+    <script xmlns:xhtml="http://www.w3.org/1999/xhtml" src="../../../../../v_5570_nol_zh_CNs_desktopd_pc/system/core.min.js"></script>
+    <script xmlns:xhtml="http://www.w3.org/1999/xhtml" src="../../../../../v_5570_nol_zh_CNs_desktopd_pc/system/common.min.js"></script>
+    <script xmlns:xhtml="http://www.w3.org/1999/xhtml" src="../../../../../v_5570_nol_zh_CNs_desktopd_pc/system/components/comp.min.js"></script>
+    <script xmlns:xhtml="http://www.w3.org/1999/xhtml" src="../../../../../v_5570_nol_zh_CNs_desktopd_pc/system/components/comp2.min.js"></script>
+    <script xmlns:xhtml="http://www.w3.org/1999/xhtml" src="../../../../../v_5570_nol_zh_CNs_desktopd_pc/system/biz.common.min.js"></script>
+    <script xmlns:xhtml="http://www.w3.org/1999/xhtml" src="../../../../../v_5570_nol_zh_CNs_desktopd_pc/system/components/pc.addon.min.js"></script>
+    <script id="_mainScript">
+        
+			if (__continueRun) {
+                window.__justep.cssReady = function(fn){
+                	var promises = [];
+                	for (var p in window.__justep.__ResourceEngine.__loadingCss){
+                		if(window.__justep.__ResourceEngine.__loadingCss.hasOwnProperty(p))
+                			promises.push(window.__justep.__ResourceEngine.__loadingCss[p].promise());
+                	}
+                	$.when.apply($, promises).done(fn);
+                };
+                
+            	window.__justep.__ResourceEngine = {
+            		readyRegExp : navigator.platform === 'PLAYSTATION 3' ? /^complete$/ : /^(complete|loaded)$/,
+            		url: window.location.href,	
+            		/*contextPath: 不包括语言 */
+            		contextPath: "",
+            		serverPath: "",
+            		__loadedJS: [],
+            		__loadingCss: {},
+            		onLoadCss: function(url, node){
+            			if (!this.__loadingCss[url]){
+            				this.__loadingCss[url] = $.Deferred();	
+                			if (node.attachEvent &amp;&amp;
+                                    !(node.attachEvent.toString &amp;&amp; node.attachEvent.toString().indexOf('[native code') &lt; 0) &amp;&amp;
+                                    !(typeof opera !== 'undefined' &amp;&amp; opera.toString() === '[object Opera]')) {
+                                node.attachEvent('onreadystatechange', this.onLinkLoad.bind(this));
+                            } else {
+                                node.addEventListener('load', this.onLinkLoad.bind(this), false);
+                                node.addEventListener('error', this.onLinkError.bind(this), false);
+                            }
+            			}
+            		},
+            		
+            		onLinkLoad: function(evt){
+            	        var target = (evt.currentTarget || evt.srcElement);
+            	        if (evt.type === 'load' ||
+                                (this.readyRegExp.test(target.readyState))) {
+            	        	var url = target.getAttribute("href");
+            	        	if (url &amp;&amp; window.__justep.__ResourceEngine.__loadingCss[url]){
+            	        		window.__justep.__ResourceEngine.__loadingCss[url].resolve(url);
+            	        	}
+                        }
+            		},
+            		
+            		onLinkError: function(evt){
+            	        var target = (evt.currentTarget || evt.srcElement);
+        	        	var url = target.getAttribute("href");
+        	        	if (url &amp;&amp; window.__justep.__ResourceEngine.__loadingCss[url]){
+        	        		window.__justep.__ResourceEngine.__loadingCss[url].resolve(url);
+        	        	}
+            		},
+            		
+            		initContextPath: function(){
+            			var baseURL = document.getElementById("_requireJS").src;
+            			var before = location.protocol + "//" + location.host;
+            			var after = "/system/lib/require/require.2.1.10";
+            			var i = baseURL.indexOf(after);
+            			if (i !== -1){
+    	        			var middle = baseURL.substring(before.length, i);
+    						var items = middle.split("/");
+    						
+    						
+    						if ((items[items.length-1].indexOf("v_") === 0) 
+    								&amp;&amp; (items[items.length-1].indexOf("l_") !== -1)
+    								&amp;&amp; (items[items.length-1].indexOf("s_") !== -1)
+    								&amp;&amp; (items[items.length-1].indexOf("d_") !== -1)
+    								|| (items[items.length-1]=="v_")){
+    							items.splice(items.length-1, 1);
+    						}
+    						
+    						
+    						if (items.length !== 1){
+    							window.__justep.__ResourceEngine.contextPath = items.join("/");
+    						}else{
+    							window.__justep.__ResourceEngine.contextPath = before;
+    						}
+    						var index = window.__justep.__ResourceEngine.contextPath.lastIndexOf("/");
+    						if (index != -1){
+    							window.__justep.__ResourceEngine.serverPath = window.__justep.__ResourceEngine.contextPath.substr(0, index);
+    						}else{
+    							window.__justep.__ResourceEngine.serverPath = window.__justep.__ResourceEngine.contextPath;
+    						}
+            			}else{
+            				throw new Error(baseURL + " hasn't  " + after);
+            			}
+            		},
+            	
+            		loadJs: function(urls){
+            			if (urls &amp;&amp; urls.length&gt;0){
+            				var loadeds = this._getResources("script", "src").concat(this.__loadedJS);
+    	       				for (var i=0; i&lt;urls.length; i++){
+								var url = urls[i];
+    	        				if(!this._isLoaded(url, loadeds)){
+    	        					this.__loadedJS[this.__loadedJS.length] = url;
+    	        					/*
+    	        					var script = document.createElement("script");
+    	        					script.src = url;
+    	        					document.head.appendChild(script);
+    	        					*/
+    	        					//$("head").append("&lt;script  src='" + url + "'/&gt;");
+									var url = require.toUrl("$UI" + url);
+    	        					$.ajax({
+    	        						url: url,
+    	        						dataType: "script",
+    	        						cache: true,
+    	        						async: false,
+    	        						success: function(){}
+    	        						});
+    	        				} 
+    	       				}
+            			}
+            		},
+            		
+            		loadCss: function(styles){
+           				var loadeds = this._getResources("link", "href");
+            			if (styles &amp;&amp; styles.length&gt;0){
+            				for (var i=0; i&lt;styles.length; i++){
+    	       					var url = window.__justep.__ResourceEngine.contextPath + styles[i].url
+    	        				if(!this._isLoaded(url, loadeds)){
+    	        					var include = styles[i].include || "";
+    	        					var link = $("&lt;link type='text/css' rel='stylesheet' href='" + url + "' include='" + include + "'/&gt;");
+    	        					this.onLoadCss(url, link[0]);
+    	        					$("head").append(link);
+    	        				} 
+            				}
+            			}
+            			
+            		},
+            		
+            		
+            		_isLoaded: function(url, loadeds){
+            			if (url){
+            				var newUrl = "";
+            				var items = url.split("/");
+            				var isVls = false;
+            				for (var i=0; i&lt;items.length; i++){
+            					if (isVls){
+                					newUrl += "/" + items[i];
+            					}else{
+                					if (items[i] &amp;&amp; (items[i].indexOf("v_")===0)
+            								&amp;&amp; (items[i].indexOf("l_")!==-1)
+            								&amp;&amp; (items[i].indexOf("s_")!==-1)
+            								&amp;&amp; (items[i].indexOf("d_")!==-1)
+            								|| (items[i]=="v_")){
+                						isVls = true;
+                					}
+            					}
+            				}
+            				if (!newUrl)
+            					newUrl = url;
+            				
+            				for (var i=0; i&lt;loadeds.length; i++){
+								var originUrl = this._getOriginUrl(loadeds[i]);
+								if (originUrl &amp;&amp; (originUrl.indexOf(newUrl)!==-1)){
+									return true;
+								}
+    						}
+            			}
+    					return false;
+            		},
+
+					_getOriginUrl: function(url){
+						var result = "";
+						if (url &amp;&amp; (url.indexOf(".md5_")!==-1)){
+							url = url.split("#")[0];
+							url = url.split("?")[0];
+							var items = url.split(".");
+							for (var i=0; i&lt;items.length; i++){
+								if ((i===items.length-2) &amp;&amp; (items[i].indexOf("md5_")!==-1)){
+									continue;
+								}else{
+									if (i&gt;0) result += ".";
+									result += items[i];
+								}
+							}
+						}else{
+							result = url;
+						}
+						return result;
+					},
+            		
+            		_getResources: function(tag, attr){
+    					var result = [];
+    					var scripts = $(tag);
+    					for (var i=0; i&lt;scripts.length; i++){
+    						var v = scripts[i][attr];
+    						if (v){
+    							result[result.length] = v;
+    						}
+    					}
+    					return result;
+            		}
+            	};
+            	
+            	window.__justep.__ResourceEngine.initContextPath();
+    			requirejs.config({
+    				baseUrl: window.__justep.__ResourceEngine.contextPath + '/v_5570_2_1l_zh_CNs_desktopd_pc/custom/crm/process/customManager',
+    			    paths: {
+    			    	/* 解决require.normalizeName与require.toUrl嵌套后不一致的bug   */
+    			    	'$model/UI2/v_': window.__justep.__ResourceEngine.contextPath + '/v_5570_2_1l_zh_CNs_desktopd_pc',
+    			    	'$model/UI2': window.__justep.__ResourceEngine.contextPath + '/v_5570_2_1l_zh_CNs_desktopd_pc',
+    			    	'$model': window.__justep.__ResourceEngine.serverPath,
+    			        'text': window.__justep.__ResourceEngine.contextPath + '/v_5570_2_1l_zh_CNs_desktopd_pc/system/lib/require/text.2.0.10',
+    			        'bind': window.__justep.__ResourceEngine.contextPath + '/v_5570_2_1l_zh_CNs_desktopd_pc/system/lib/bind/bind',
+    			        'jquery': window.__justep.__ResourceEngine.contextPath + '/v_5570_2_1l_zh_CNs_desktopd_pc/system/lib/jquery/jquery-1.11.1.min'
+    			    },
+    			    map: {
+    				        '*': {
+    				            res: '$model/UI2/system/lib/require/res',
+    				            cordova: '$model/UI2/system/lib/require/cordova',
+    				            w: '$model/UI2/system/lib/require/w',
+    				            css: '$model/UI2/system/lib/require/css'
+    				        }
+    				},
+    				waitSeconds: 300
+    			});
+    			
+    			requirejs(['require', 'jquery', '$model/UI2/system/lib/base/composition', '$model/UI2/system/lib/base/url', '$model/UI2/system/lib/route/hashbangParser', '$model/UI2/system/components/justep/versionChecker/versionChecker', '$model/UI2/system/components/justep/loadingBar/loadingBar', '$model/UI2/system/lib/jquery/domEvent',  '$model/UI2/system/lib/cordova/cordova'],  function (require, $, composition, URL, HashbangParser,versionChecker) { 
+    				document.addEventListener('deviceready', function() {
+    	                if (navigator &amp;&amp; navigator.splashscreen &amp;&amp; navigator.splashscreen.hide) {
+    	                	/*延迟隐藏，视觉效果更理想*/
+    	                	setTimeout(function() {navigator.splashscreen.hide();}, 800);
+    	                }
+    	            }, false);
+					setTimeout(function(){
+						versionChecker.check();
+					},2000);
+    				var context = {};
+    				context.model = '$model/UI2/custom/crm/process/customManager/main2Activity.w' + (document.location.search || "");
+    				context.view = $('#applicationHost').children()[0];
+    				var element = document.getElementById('applicationHost');
+
+					    				
+    				
+    				var ownerid = new URL(window.__justep.__ResourceEngine.url).getParam("$ownerid");
+    				var pwindow = opener;
+    				if (!pwindow &amp;&amp; window.parent &amp;&amp; window.parent.window){
+    					pwindow = window.parent.window;
+    				}
+    				if(ownerid &amp;&amp; pwindow 
+    						&amp;&amp; pwindow.__justep &amp;&amp; pwindow.__justep.windowOpeners
+    						&amp;&amp; pwindow.__justep.windowOpeners[ownerid]
+    						&amp;&amp; $.isFunction(pwindow.__justep.windowOpeners[ownerid].sendToWindow)){
+    					window.__justep.setParams = function(params){
+    						/* 给windowOpener提供再次传参数的接口  */
+    						params = params || {};
+    						composition.setParams(document.getElementById('applicationHost'), params);
+    					};
+    					var winOpener = pwindow.__justep.windowOpeners[ownerid];
+    					if(winOpener) winOpener.window = window;
+    					$(window).unload(function(event){
+    						if(winOpener &amp;&amp; winOpener.dispatchCloseEvent) winOpener.dispatchCloseEvent();
+    					});
+    					var params = winOpener.sendToWindow();
+						context.owner = winOpener;
+						context.params = params || {};
+	        			composition.compose(element, context);
+    				}else{
+        				var params =  {};
+    					var state = new HashbangParser(window.location.hash).parse().__state;
+    					if (state){
+    						params = state.get("");
+    						try{
+    							params = JSON.parse(params);
+    							if (params.hasOwnProperty("__singleValue__")){
+    								params = params.__singleValue__;
+    							}
+    						}catch(e1){}
+    					}
+    					context.noUpdateState = true;
+        				context.params = params;
+        				composition.compose(element, context);
+    				}
+    			});    
+            }
+		 	
+        </script> 
+  </body> 
+</html>

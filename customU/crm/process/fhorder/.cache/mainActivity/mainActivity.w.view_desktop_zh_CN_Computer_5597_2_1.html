@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window c3mIjmm" component="$model/UI2/system/components/justep/window/window" design="device:pc" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="c3mIjmm" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/button/checkbox,$model/UI2/system/components/justep/reportData/reportData,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/justep/report/report,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/toolBar/toolBar,">  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="c3mIjmm" class="c3mIjmm"/>  
+  <div xmlns="" component="$model/UI2/system/components/justep/toolBar/toolBar" class="x-toolbar form-inline x-toolbar-spliter c3mIjmm" xid="toolBar1" data-bind="component:{name:'$model/UI2/system/components/justep/toolBar/toolBar'}" __cid="c3mIjmm"> 
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link c3mIjmm" xid="yesBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:yesBtnClick" data-config="{&quot;disabled&quot;:true,&quot;icon&quot;:&quot;linear linear-bubble&quot;,&quot;label&quot;:&quot;确认&quot;}" __cid="c3mIjmm"> 
+      <i xid="i7" class="linear linear-bubble c3mIjmm" __cid="c3mIjmm"/>  
+      <span xid="span7" __cid="c3mIjmm" class="c3mIjmm">确认</span> 
+    </a>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left c3mIjmm" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.pageSetup'}" __cid="c3mIjmm"> 
+      <i xid="i1" __cid="c3mIjmm" class="c3mIjmm"/>  
+      <span xid="span1" __cid="c3mIjmm" class="c3mIjmm"/> 
+    </a>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left c3mIjmm" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.preview'}" __cid="c3mIjmm"> 
+      <i xid="i2" __cid="c3mIjmm" class="c3mIjmm"/>  
+      <span xid="span2" __cid="c3mIjmm" class="c3mIjmm"/> 
+    </a>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left c3mIjmm" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.print'}" __cid="c3mIjmm"> 
+      <i xid="i3" __cid="c3mIjmm" class="c3mIjmm"/>  
+      <span xid="span3" __cid="c3mIjmm" class="c3mIjmm"/> 
+    </a>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left c3mIjmm" xid="button5" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.exportWord'}" __cid="c3mIjmm"> 
+      <i xid="i5" __cid="c3mIjmm" class="c3mIjmm"/>  
+      <span xid="span5" __cid="c3mIjmm" class="c3mIjmm"/> 
+    </a>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-left c3mIjmm" xid="button6" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{'operation':'report1.exportExcel'}" __cid="c3mIjmm"> 
+      <i xid="i6" __cid="c3mIjmm" class="c3mIjmm"/>  
+      <span xid="span6" __cid="c3mIjmm" class="c3mIjmm"/> 
+    </a>  
+    <span component="$model/UI2/system/components/justep/button/checkbox" class="x-checkbox c3mIjmm" xid="printCheckbox" checked="false" checkedValue="1" uncheckedValue="0" label="已打印" data-config="{&quot;checked&quot;:false,&quot;checkedValue&quot;:&quot;1&quot;,&quot;disabled&quot;:false,&quot;label&quot;:&quot;已打印&quot;,&quot;uncheckedValue&quot;:&quot;0&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/checkbox'}" __cid="c3mIjmm"> 
+      <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="checkbox" __cid="c3mIjmm" class="c3mIjmm"></input>  
+      <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="c3mIjmm" class="c3mIjmm">已打印</label> 
+    </span>  
+    <input component="$model/UI2/system/components/justep/input/input" class="form-control c3mIjmm" xid="input1" data-bind="component:{ref:$model.selectData.ref(&quot;date&quot;),name:'$model/UI2/system/components/justep/input/input'}" __cid="c3mIjmm"/>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link c3mIjmm" xid="button4" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button4Click" data-config="{&quot;label&quot;:&quot;确定&quot;}" __cid="c3mIjmm"> 
+      <i xid="i4" __cid="c3mIjmm" class="c3mIjmm"/>  
+      <span xid="span4" __cid="c3mIjmm" class="c3mIjmm">确定</span> 
+    </a> 
+  </div>  
+  <div xmlns="" component="$model/UI2/system/components/justep/report/report" src="@justepContextPath@/v_5597_2_1l_zh_CNs_desktopd_pc/custom/crm/process/fhorder/fhorder_xls.xml" reportName="report" dataList="" class="x-report x-scroll-h c3mIjmm" xid="report1" data-bind="component:{name:'$model/UI2/system/components/justep/report/report'}" data-config="{&quot;autoLoad&quot;:true}" __cid="c3mIjmm"> 
+    <span xmlns:xhtml="http://www.w3.org/1999/xhtml" style="display:none" xblid="attribute" paperType="A4" pageWidth="210mm" pageHeight="297mm" orientation="" marginTop="2.4mm" marginBottom="2.4mm" marginLeft="3.7mm" marginRight="3.7mm" marginHeader="" marginFootter="" dataList="p1" cacheFile="%2FUI2%2Fcustom%2Fcrm%2Fprocess%2Ffhorder%2F.cache%2FmainActivity.report" __cid="c3mIjmm" class="c3mIjmm"></span>  
+    <div xid="report_report1_content" report-name="report" __cid="c3mIjmm" class="c3mIjmm"/> 
+  </div> 
+</div>
